@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://astro-docs.esdocu.com/</loc>
+    <loc>https://astro-docs.esdocu.com/concepts/why-astro</loc>
   </url>
   <url>
     <loc>https://astro-docs.esdocu.com/getting-started</loc>
+  </url>
+  <url>
+    <loc>https://astro-docs.esdocu.com/install-and-setup</loc>
   </url>
 </urlset>
