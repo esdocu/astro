@@ -1,5 +1,5 @@
-<!DOCTYPE html><html lang="es" dir="ltr" data-theme="light" data-has-sidebar="" data-has-hero="" class="astro-5rh3l5p7"><head>
-		<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Getting started | Docs</title><link rel="canonical" href="https://docs.astro.build/en/getting-started/"><link rel="sitemap" href="/sitemap-index.xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"><meta name="generator" content="Astro v7.0.2"><meta name="generator" content="Starlight v0.41.0"><meta property="og:title" content="Getting started"><meta property="og:type" content="article"><meta property="og:url" content="https://docs.astro.build/en/getting-started/"><meta property="og:locale" content="en"><meta property="og:description" content="Guides, resources, and API references to help you build with Astro — the web framework for content-driven websites."><meta property="og:site_name" content="Docs"><meta name="twitter:card" content="summary_large_image"><meta name="description" content="Guides, resources, and API references to help you build with Astro — the web framework for content-driven websites."><meta property="og:image" content="https://docs.astro.build/open-graph/en/getting-started.webp"><meta name="twitter:image" content="https://docs.astro.build/open-graph/en/getting-started.webp"><meta name="twitter:site" content="astrodotbuild"><meta name="docsearch:language" content="en"><script src="https://cdn.usefathom.com/script.js" data-site="EZBHTSIG" data-canonical="true" defer=""></script>
+<!DOCTYPE html><html lang="es" dir="ltr" data-theme="light" data-has-toc="" data-has-sidebar="" class="astro-5rh3l5p7"><head>
+		<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Islands architecture | Docs</title><link rel="canonical" href="https://docs.astro.build/en/concepts/islands/"><link rel="sitemap" href="/sitemap-index.xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"><meta name="generator" content="Astro v7.0.2"><meta name="generator" content="Starlight v0.41.0"><meta property="og:title" content="Arquitectura de islas"><meta property="og:type" content="article"><meta property="og:url" content="https://docs.astro.build/en/concepts/islands/"><meta property="og:locale" content="en"><meta property="og:description" content="Learn about how Astro's islands architecture helps keep sites fast."><meta property="og:site_name" content="Docs"><meta name="twitter:card" content="summary_large_image"><meta name="description" content="Learn about how Astro's islands architecture helps keep sites fast."><meta property="og:image" content="https://docs.astro.build/open-graph/en/concepts/islands.webp"><meta name="twitter:image" content="https://docs.astro.build/open-graph/en/concepts/islands.webp"><meta name="twitter:site" content="astrodotbuild"><meta name="docsearch:language" content="en"><script src="https://cdn.usefathom.com/script.js" data-site="EZBHTSIG" data-canonical="true" defer=""></script>
 		
 		
 <script>
@@ -50,7 +50,9 @@
 @layer starlight.components{starlight-file-tree:where(.astro-udg4cjpg){--x-space:1.5rem;--y-space:.125rem;--y-pad:0;border:1px solid var(--sl-color-gray-5);background-color:var(--sl-color-gray-6);font-size:var(--sl-text-xs);font-family:var(--__sl-font-mono);padding:1rem;display:block;overflow-x:auto}starlight-file-tree:where(.astro-udg4cjpg) .directory>details{padding:0;background:0 0;border:0;padding-inline-start:var(--x-space)}starlight-file-tree:where(.astro-udg4cjpg) .directory>details>summary{padding:var(--y-pad) .625rem;color:var(--sl-color-white);border:0;max-width:100%;margin-inline-start:calc(-1 * var(--x-space));font-weight:400}starlight-file-tree:where(.astro-udg4cjpg) .directory>details>summary::marker{color:var(--sl-color-gray-3)}starlight-file-tree:where(.astro-udg4cjpg) .directory>details>summary::-webkit-details-marker{color:var(--sl-color-gray-3)}starlight-file-tree:where(.astro-udg4cjpg) .directory>details>summary:hover,starlight-file-tree:where(.astro-udg4cjpg) .directory>details>summary:hover .tree-icon{cursor:pointer;color:var(--sl-color-text-accent);fill:currentColor}starlight-file-tree:where(.astro-udg4cjpg) .directory>details>summary:hover~ul{border-color:var(--sl-color-gray-4)}starlight-file-tree:where(.astro-udg4cjpg) .directory>details>summary:hover .highlight .tree-icon{color:var(--sl-color-text-invert);fill:currentColor}starlight-file-tree:where(.astro-udg4cjpg) ul{border-inline-start:1px solid var(--sl-color-gray-5);margin-inline-start:.5rem;padding:0;padding-inline-start:.125rem;list-style:none}starlight-file-tree:where(.astro-udg4cjpg)>ul{border:0;margin:0;padding:0}starlight-file-tree:where(.astro-udg4cjpg) li{margin:var(--y-space) 0;padding:var(--y-pad) 0}starlight-file-tree:where(.astro-udg4cjpg) .file{color:var(--sl-color-white);margin-inline-start:calc(var(--x-space) - .125rem)}starlight-file-tree:where(.astro-udg4cjpg) .tree-entry{flex-wrap:wrap;align-items:flex-start;max-width:calc(100% - 1rem);display:inline-flex}@media (width>=30em){starlight-file-tree:where(.astro-udg4cjpg) .tree-entry{flex-wrap:nowrap}}starlight-file-tree:where(.astro-udg4cjpg) .tree-entry>:first-child{flex-shrink:0}starlight-file-tree:where(.astro-udg4cjpg) .empty{color:var(--sl-color-gray-3);padding-inline-start:.375rem}starlight-file-tree:where(.astro-udg4cjpg) .comment{color:var(--sl-color-gray-3);min-width:12rem;max-width:24rem;padding-inline-start:1.625rem}starlight-file-tree:where(.astro-udg4cjpg) .highlight{color:var(--sl-color-text-invert);background-color:var(--sl-color-text-accent);border-radius:.25rem;padding-inline-end:.5rem;display:inline-block}starlight-file-tree:where(.astro-udg4cjpg) svg{fill:var(--sl-color-gray-3);vertical-align:middle;width:.875rem;height:.875rem;margin-inline:.25rem .375rem;display:inline}starlight-file-tree:where(.astro-udg4cjpg) .highlight svg.tree-icon{fill:currentColor}}
 .integrations-nav:where(.astro-z37fvjko) .scope{color:var(--sl-color-text);font-weight:400}
 @layer starlight.components{.sl-link-button:where(.astro-b66feiu3){font-size:var(--sl-text-sm);outline-offset:.25rem;border:1px solid #0000;border-radius:999rem;align-items:center;gap:.5em;padding:.4375rem 1.125rem;line-height:1.1875;text-decoration:none;display:inline-flex}.sl-link-button:where(.astro-b66feiu3).primary{background:var(--sl-color-text-accent);border-color:var(--sl-color-text-accent);color:var(--sl-color-black)}.sl-link-button:where(.astro-b66feiu3).primary:hover{color:var(--sl-color-black)}.sl-link-button:where(.astro-b66feiu3).secondary{border-color:inherit;color:var(--sl-color-white)}.sl-link-button:where(.astro-b66feiu3).minimal{color:var(--sl-color-white);padding-inline:0}.sl-link-button:where(.astro-b66feiu3) svg{flex-shrink:0}@media (width>=50rem){.sl-link-button:where(.astro-b66feiu3){font-size:var(--sl-text-base);padding:.9375rem 1.25rem}}.sl-markdown-content .sl-link-button:where(.astro-b66feiu3){margin-inline-end:1rem}.sl-markdown-content .sl-link-button:where(.astro-b66feiu3):not(:where(p *)){margin-block:1rem}}
-</style><script type="module" src="/_astro/page.169VI7mI.js"></script><link rel="alternate" hreflang="en" href="https://docs.astro.build/en/getting-started"><link rel="alternate" hreflang="es" href="https://astro-docs.esdocu.com/getting-started"><link rel="alternate" hreflang="x-default" href="https://docs.astro.build/en/getting-started"></head>
+</style><script type="module" src="/_astro/page.169VI7mI.js"></script><style>.diagram:where(.astro-str5vk2j){grid-gap:.75rem;grid-template-areas:"header header header""sidebar main main""sidebar carousel carousel""footer footer footer";padding:.75rem;display:grid;overflow-x:auto}.diagram:where(.astro-str5vk2j)>:where(.astro-str5vk2j){text-align:center;background:var(--sl-color-gray-6);border:2px solid var(--sl-color-gray-5);color:var(--sl-color-gray-2);justify-content:center;align-items:center;padding:2rem;display:flex}.diagram:where(.astro-str5vk2j) .app:where(.astro-str5vk2j){font-size:1.05rem}.diagram:where(.astro-str5vk2j) .header:where(.astro-str5vk2j){color:var(--sl-color-gray-1);background:#6c33;border-color:#50743ecc;grid-area:header}.diagram:where(.astro-str5vk2j) .sidebar:where(.astro-str5vk2j){grid-area:sidebar}.diagram:where(.astro-str5vk2j) .main:where(.astro-str5vk2j){grid-area:main;height:320px}.diagram:where(.astro-str5vk2j) .carousel:where(.astro-str5vk2j){color:var(--sl-color-gray-1);background:#e61aa133;border-color:#743e62cc;grid-area:carousel}.diagram:where(.astro-str5vk2j) .adv:where(.astro-str5vk2j){grid-area:adv}.diagram:where(.astro-str5vk2j) .footer:where(.astro-str5vk2j){grid-area:footer}:root.theme-dark .app:where(.astro-str5vk2j){color:#ffffffe6}:root.theme-dark .diagram:where(.astro-str5vk2j) :where(.astro-str5vk2j):not(.app){color:#ffffffbf;background:#99999914;border-color:#cccccc26}.credit:where(.astro-str5vk2j){text-align:right;font-size:var(--sl-text-xs)}
+</style><style>.read-more:where(.astro-veghvfl5){align-items:flex-start;gap:.5rem;display:flex}.icon:where(.astro-veghvfl5){--icon-size:1.5rem;font-size:var(--icon-size);margin-block:calc((var(--sl-line-height) * 1rem - var(--icon-size)) / 2);color:var(--sl-color-text-accent);flex-shrink:0}
+</style><link rel="alternate" hreflang="en" href="https://docs.astro.build/en/concepts/islands"><link rel="alternate" hreflang="es" href="https://astro-docs.esdocu.com/concepts/islands"><link rel="alternate" hreflang="x-default" href="https://docs.astro.build/en/concepts/islands"></head>
 	<body class="astro-5rh3l5p7">
 		<a href="#_top" class="astro-4wbn7wpj" data-sl-id="f1">Saltar al contenido</a>
 		<div class="page sl-flex astro-knkuelpe">
@@ -113,7 +115,7 @@
 	<span class="sr-only astro-pl7p4lbc" data-sl-id="f10">Seleccionar idioma</span>
 	<svg aria-hidden="true" class="icon label-icon astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"></path></svg>
 	<select autocomplete="off" class="astro-pl7p4lbc">
-		<option value="/en/getting-started/" selected="" class="astro-pl7p4lbc" data-sl-id="f11">English</option><option value="/de/getting-started/" class="astro-pl7p4lbc" data-sl-id="f12">Deutsch</option><option value="/pt-br/getting-started/" class="astro-pl7p4lbc" data-sl-id="f13">Português do Brasil</option><option value="/es/getting-started/" class="astro-pl7p4lbc" data-sl-id="f14">Español</option><option value="/zh-cn/getting-started/" class="astro-pl7p4lbc" data-sl-id="f15">简体中文</option><option value="/zh-tw/getting-started/" class="astro-pl7p4lbc" data-sl-id="f16">正體中文</option><option value="/fr/getting-started/" class="astro-pl7p4lbc" data-sl-id="f17">Français</option><option value="/hi/getting-started/" class="astro-pl7p4lbc">हिन्दी</option><option value="/ar/getting-started/" class="astro-pl7p4lbc">العربية</option><option value="/ja/getting-started/" class="astro-pl7p4lbc" data-sl-id="f18">日本語</option><option value="/ko/getting-started/" class="astro-pl7p4lbc">한국어</option><option value="/pl/getting-started/" class="astro-pl7p4lbc" data-sl-id="f19">Polski</option><option value="/ru/getting-started/" class="astro-pl7p4lbc">Русский</option><option value="/it/getting-started/" class="astro-pl7p4lbc" data-sl-id="f20">Italiano</option>
+		<option value="/en/concepts/islands/" selected="" class="astro-pl7p4lbc" data-sl-id="f11">English</option><option value="/de/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f12">Deutsch</option><option value="/pt-br/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f13">Português do Brasil</option><option value="/es/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f14">Español</option><option value="/zh-cn/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f15">简体中文</option><option value="/zh-tw/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f16">正體中文</option><option value="/fr/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f17">Français</option><option value="/hi/concepts/islands/" class="astro-pl7p4lbc">हिन्दी</option><option value="/ar/concepts/islands/" class="astro-pl7p4lbc">العربية</option><option value="/ja/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f18">日本語</option><option value="/ko/concepts/islands/" class="astro-pl7p4lbc">한국어</option><option value="/pl/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f19">Polski</option><option value="/ru/concepts/islands/" class="astro-pl7p4lbc">Русский</option><option value="/it/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f20">Italiano</option>
 	</select>
 	<svg aria-hidden="true" class="icon caret astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"></path></svg>
 </label>
@@ -161,20 +163,20 @@
 	<tabbed-content class="astro-ngvtsbkj">
 	<ul class="tab-list tabbed-sidebar astro-ssgxcmrq astro-ngvtsbkj" role="tablist">
 		<li class="tab-item astro-ssgxcmrq" role="presentation">
-	<a href="#__tab-tutorial" class="tab-link" role="tab" id="hho2ahptab0" tabindex="-1" data-sl-id="f21"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg> Tutorial</a>
+	<a href="#__tab-tutorial" class="tab-link" role="tab" id="tpjorp0tab0" tabindex="-1" data-sl-id="f21"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg> Tutorial</a>
 </li><li class="tab-item astro-ssgxcmrq" role="presentation">
-	<a href="#__tab-guide" class="tab-link" data-initial="true" aria-selected="true" role="tab" id="hho2ahptab1" data-sl-id="f22"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.17 2.06A13.1 13.1 0 0 0 19 1.87a12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2 13.1 13.1 0 0 0-2.17.19 1 1 0 0 0-.83 1v12a1 1 0 0 0 1.17 1 10.9 10.9 0 0 1 8.25 1.91l.12.07h.11a.91.91 0 0 0 .7 0h.11l.12-.07A10.899 10.899 0 0 1 20.83 16 1 1 0 0 0 22 15V3a1 1 0 0 0-.83-.94ZM11 15.35a12.87 12.87 0 0 0-6-1.48H4v-10c.333-.02.667-.02 1 0a10.86 10.86 0 0 1 6 1.8v9.68Zm9-1.44h-1a12.87 12.87 0 0 0-6 1.48V5.67a10.86 10.86 0 0 1 6-1.8c.333-.02.667-.02 1 0v10.04Zm1.17 4.15a13.098 13.098 0 0 0-2.17-.19 12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2.05c-.727.003-1.453.066-2.17.19A1 1 0 0 0 2 19.21a1 1 0 0 0 1.17.79 10.9 10.9 0 0 1 8.25 1.91 1 1 0 0 0 1.16 0A10.9 10.9 0 0 1 20.83 20a1 1 0 0 0 1.17-.79 1 1 0 0 0-.83-1.15Z"></path></svg> Guía</a>
+	<a href="#__tab-guide" class="tab-link" data-initial="true" aria-selected="true" role="tab" id="tpjorp0tab1" data-sl-id="f22"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.17 2.06A13.1 13.1 0 0 0 19 1.87a12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2 13.1 13.1 0 0 0-2.17.19 1 1 0 0 0-.83 1v12a1 1 0 0 0 1.17 1 10.9 10.9 0 0 1 8.25 1.91l.12.07h.11a.91.91 0 0 0 .7 0h.11l.12-.07A10.899 10.899 0 0 1 20.83 16 1 1 0 0 0 22 15V3a1 1 0 0 0-.83-.94ZM11 15.35a12.87 12.87 0 0 0-6-1.48H4v-10c.333-.02.667-.02 1 0a10.86 10.86 0 0 1 6 1.8v9.68Zm9-1.44h-1a12.87 12.87 0 0 0-6 1.48V5.67a10.86 10.86 0 0 1 6-1.8c.333-.02.667-.02 1 0v10.04Zm1.17 4.15a13.098 13.098 0 0 0-2.17-.19 12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2.05c-.727.003-1.453.066-2.17.19A1 1 0 0 0 2 19.21a1 1 0 0 0 1.17.79 10.9 10.9 0 0 1 8.25 1.91 1 1 0 0 0 1.16 0A10.9 10.9 0 0 1 20.83 20a1 1 0 0 0 1.17-.79 1 1 0 0 0-.83-1.15Z"></path></svg> Guía</a>
 </li><li class="tab-item astro-ssgxcmrq" role="presentation">
-	<a href="#__tab-reference" class="tab-link" role="tab" id="hho2ahptab2" tabindex="-1" data-sl-id="f23"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"></path></svg> Referencia</a>
+	<a href="#__tab-reference" class="tab-link" role="tab" id="tpjorp0tab2" tabindex="-1" data-sl-id="f23"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"></path></svg> Referencia</a>
 </li><li class="tab-item astro-ssgxcmrq" role="presentation">
-	<a href="#__tab-ecosystem" class="tab-link" role="tab" id="hho2ahptab3" tabindex="-1" data-sl-id="f24"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 22H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h1a4 4 0 0 1 7.3-2.18c.448.64.692 1.4.7 2.18h3a1 1 0 0 1 1 1v3a4 4 0 0 1 2.18 7.3A3.86 3.86 0 0 1 18 18v3a1 1 0 0 1-1 1ZM5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11v-3.18a1 1 0 0 1 1.33-.95 1.77 1.77 0 0 0 1.74-.23 2 2 0 0 0 .93-1.37 2 2 0 0 0-.48-1.59 1.89 1.89 0 0 0-2.17-.55 1 1 0 0 1-1.33-.95V8h-3.2a1 1 0 0 1-1-1.33 1.77 1.77 0 0 0-.23-1.74 1.939 1.939 0 0 0-3-.43A2 2 0 0 0 8 6c.002.23.046.456.13.67A1 1 0 0 1 7.18 8H5Z"></path></svg> Ecosistema</a>
+	<a href="#__tab-ecosystem" class="tab-link" role="tab" id="tpjorp0tab3" tabindex="-1" data-sl-id="f24"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 22H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h1a4 4 0 0 1 7.3-2.18c.448.64.692 1.4.7 2.18h3a1 1 0 0 1 1 1v3a4 4 0 0 1 2.18 7.3A3.86 3.86 0 0 1 18 18v3a1 1 0 0 1-1 1ZM5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11v-3.18a1 1 0 0 1 1.33-.95 1.77 1.77 0 0 0 1.74-.23 2 2 0 0 0 .93-1.37 2 2 0 0 0-.48-1.59 1.89 1.89 0 0 0-2.17-.55 1 1 0 0 1-1.33-.95V8h-3.2a1 1 0 0 1-1-1.33 1.77 1.77 0 0 0-.23-1.74 1.939 1.939 0 0 0-3-.43A2 2 0 0 0 8 6c.002.23.046.456.13.67A1 1 0 0 1 7.18 8H5Z"></path></svg> Ecosistema</a>
 </li>
 	</ul>
 
 	<div class="panels tabbed-sidebar astro-ssgxcmrq astro-ngvtsbkj">
 		
 		
-		<div id="__tab-tutorial" class="astro-imqsbqrp" role="tabpanel" tabindex="-1" aria-labelledby="hho2ahptab0" hidden="">
+		<div id="__tab-tutorial" class="astro-imqsbqrp" role="tabpanel" tabindex="-1" aria-labelledby="tpjorp0tab0" hidden="">
 	
 					<ul class="top-level astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
@@ -194,7 +196,7 @@
 			</li>
 </ul>
 				
-</div><div id="__tab-guide" data-initial="true" class="astro-imqsbqrp" role="tabpanel" tabindex="-1" aria-labelledby="hho2ahptab1">
+</div><div id="__tab-guide" data-initial="true" class="astro-imqsbqrp" role="tabpanel" tabindex="-1" aria-labelledby="tpjorp0tab1">
 	
 					<ul class="top-level astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
@@ -209,7 +211,7 @@
 	<li class="astro-3xlzsaht">
 				<a href="/concepts/why-astro/" class="astro-3xlzsaht" data-sl-id="f33"><span class="astro-3xlzsaht">¿Por qué Astro?</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/concepts/islands/" class="astro-3xlzsaht" data-sl-id="f34"><span class="astro-3xlzsaht">Arquitectura de islas</span></a>
+				<a href="/concepts/islands/" aria-current="page" class="astro-3xlzsaht" data-sl-id="f34"><span class="astro-3xlzsaht">Arquitectura de islas</span></a>
 			</li><li class="astro-3xlzsaht">
 				<a href="https://docs.astro.build/en/astro-courses" class="astro-3xlzsaht" data-sl-id="f35"><span class="astro-3xlzsaht">Cursos</span></a>
 			</li>
@@ -498,7 +500,7 @@
 			</li>
 </ul>
 				
-</div><div id="__tab-reference" class="astro-imqsbqrp" role="tabpanel" tabindex="-1" aria-labelledby="hho2ahptab2" hidden="">
+</div><div id="__tab-reference" class="astro-imqsbqrp" role="tabpanel" tabindex="-1" aria-labelledby="tpjorp0tab2" hidden="">
 	
 					<ul class="top-level astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
@@ -630,7 +632,7 @@
 			</li>
 </ul>
 				
-</div><div id="__tab-ecosystem" class="astro-imqsbqrp" role="tabpanel" tabindex="-1" aria-labelledby="hho2ahptab3" hidden="">
+</div><div id="__tab-ecosystem" class="astro-imqsbqrp" role="tabpanel" tabindex="-1" aria-labelledby="tpjorp0tab3" hidden="">
 	
 					<ul class="top-level astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
@@ -1039,7 +1041,7 @@
 	<span class="sr-only astro-pl7p4lbc" data-sl-id="f291">Seleccionar idioma</span>
 	<svg aria-hidden="true" class="icon label-icon astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"></path></svg>
 	<select autocomplete="off" class="astro-pl7p4lbc">
-		<option value="/en/getting-started/" selected="" class="astro-pl7p4lbc" data-sl-id="f292">English</option><option value="/de/getting-started/" class="astro-pl7p4lbc" data-sl-id="f293">Deutsch</option><option value="/pt-br/getting-started/" class="astro-pl7p4lbc" data-sl-id="f294">Português do Brasil</option><option value="/es/getting-started/" class="astro-pl7p4lbc" data-sl-id="f295">Español</option><option value="/zh-cn/getting-started/" class="astro-pl7p4lbc" data-sl-id="f296">简体中文</option><option value="/zh-tw/getting-started/" class="astro-pl7p4lbc" data-sl-id="f297">正體中文</option><option value="/fr/getting-started/" class="astro-pl7p4lbc" data-sl-id="f298">Français</option><option value="/hi/getting-started/" class="astro-pl7p4lbc">हिन्दी</option><option value="/ar/getting-started/" class="astro-pl7p4lbc">العربية</option><option value="/ja/getting-started/" class="astro-pl7p4lbc" data-sl-id="f299">日本語</option><option value="/ko/getting-started/" class="astro-pl7p4lbc">한국어</option><option value="/pl/getting-started/" class="astro-pl7p4lbc" data-sl-id="f300">Polski</option><option value="/ru/getting-started/" class="astro-pl7p4lbc">Русский</option><option value="/it/getting-started/" class="astro-pl7p4lbc" data-sl-id="f301">Italiano</option>
+		<option value="/en/concepts/islands/" selected="" class="astro-pl7p4lbc" data-sl-id="f292">English</option><option value="/de/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f293">Deutsch</option><option value="/pt-br/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f294">Português do Brasil</option><option value="/es/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f295">Español</option><option value="/zh-cn/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f296">简体中文</option><option value="/zh-tw/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f297">正體中文</option><option value="/fr/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f298">Français</option><option value="/hi/concepts/islands/" class="astro-pl7p4lbc">हिन्दी</option><option value="/ar/concepts/islands/" class="astro-pl7p4lbc">العربية</option><option value="/ja/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f299">日本語</option><option value="/ko/concepts/islands/" class="astro-pl7p4lbc">한국어</option><option value="/pl/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f300">Polski</option><option value="/ru/concepts/islands/" class="astro-pl7p4lbc">Русский</option><option value="/it/concepts/islands/" class="astro-pl7p4lbc" data-sl-id="f301">Italiano</option>
 	</select>
 	<svg aria-hidden="true" class="icon caret astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"></path></svg>
 </label>
@@ -1112,175 +1114,186 @@
 	<div class="main-frame astro-knkuelpe">
 			
 			<script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()}),addEventListener(`pageHide`,a);</script><div class="lg:sl-flex astro-ojrabbd2">
-	
+	<aside class="right-sidebar-container print:hidden astro-ojrabbd2">
+				<div class="right-sidebar astro-ojrabbd2">
+					
+			<div class="lg:sl-hidden astro-mbtvktjh">
+				<mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-gl7qdvoz">
+			<nav aria-labelledby="starlight__on-this-page--mobile" class="astro-gl7qdvoz">
+				<details id="starlight__mobile-toc" class="astro-gl7qdvoz">
+					<summary id="starlight__on-this-page--mobile" class="sl-flex astro-gl7qdvoz">
+						<div class="toggle sl-flex astro-gl7qdvoz" data-sl-id="f303">En esta página
+							<svg aria-hidden="true" class="caret astro-gl7qdvoz astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"></path></svg></div>
+						<span class="display-current astro-gl7qdvoz" data-sl-id="f304">Vista general</span>
+					</summary>
+					<div class="dropdown astro-gl7qdvoz">
+						<ul class="isMobile astro-f35rxoh7" style="--depth: 0;">
+	<li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#_top" style="--depth: 0;" class="astro-f35rxoh7" aria-current="true" data-sl-id="f305"><span style="--depth: 0;" class="astro-f35rxoh7">Vista general</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#a-brief-history" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f306"><span style="--depth: 0;" class="astro-f35rxoh7">Una breve historia</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#what-is-an-island" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f307"><span style="--depth: 0;" class="astro-f35rxoh7">¿Qué es una isla?</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#island-components" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f308"><span style="--depth: 0;" class="astro-f35rxoh7">Componentes de isla</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#client-islands" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f309"><span style="--depth: 0;" class="astro-f35rxoh7">Islas de cliente</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#server-islands" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f310"><span style="--depth: 0;" class="astro-f35rxoh7">Islas de servidor</span></a>
+				
+			</li>
+</ul>
+					</div>
+				</details>
+			</nav>
+		</mobile-starlight-toc>
+
+<script type="module" src="/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.kgentfrr.js"></script>
+			</div>
+			<div class="right-sidebar-panel sl-hidden lg:sl-block astro-mbtvktjh">
+				<div class="sl-container astro-mbtvktjh">
+					<starlight-toc data-min-h="2" data-max-h="3">
+			<nav aria-labelledby="starlight__on-this-page">
+				<h2 id="starlight__on-this-page" data-sl-id="f311">En esta página</h2>
+				<ul class="astro-f35rxoh7" style="--depth: 0;">
+	<li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#_top" style="--depth: 0;" class="astro-f35rxoh7" aria-current="true" data-sl-id="f312"><span style="--depth: 0;" class="astro-f35rxoh7">Vista general</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#a-brief-history" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f313"><span style="--depth: 0;" class="astro-f35rxoh7">Una breve historia</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#what-is-an-island" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f314"><span style="--depth: 0;" class="astro-f35rxoh7">¿Qué es una isla?</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#island-components" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f315"><span style="--depth: 0;" class="astro-f35rxoh7">Componentes de isla</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#client-islands" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f316"><span style="--depth: 0;" class="astro-f35rxoh7">Islas de cliente</span></a>
+				
+			</li><li style="--depth: 0;" class="astro-f35rxoh7">
+				<a href="#server-islands" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f317"><span style="--depth: 0;" class="astro-f35rxoh7">Islas de servidor</span></a>
+				
+			</li>
+</ul>
+			</nav>
+		</starlight-toc>
+
+<script type="module" src="/_astro/TableOfContents.astro_astro_type_script_index_0_lang.Csloo1VZ.js"></script>
+				</div>
+				<div class="sl-container astro-mbtvktjh">
+					<div class="container astro-zfz25xw4" lang="en" dir="ltr" data-algolia-exclude="">
+	<aside aria-labelledby="learn-astro-course-1" class="astro-zfz25xw4">
+		
+<img src="/_astro/AstroJobs.B8b1Zhor_1D1rE2.webp" alt="" loading="lazy" decoding="async" width="130" height="130" class="astro-zfz25xw4">
+		<h2 id="learn-astro-course-1" class="astro-zfz25xw4" data-sl-id="f318">Encuentra tu próximo <strong class="astro-zfz25xw4">trabajo de Astro</strong></h2>
+		<p class="astro-zfz25xw4" data-sl-id="f319">Puestos vacantes en equipos que ya construyen con Astro.</p>
+		<a class="sl-link-button not-content primary cta astro-zfz25xw4 astro-b66feiu3" href="https://astro.jobs?promoCode=ASTRO20" data-astrojobs-cta="true" data-sl-id="f320">Explorar puestos vacantes</a>
+	</aside>
+</div>
+
+<script type="module">document.querySelectorAll(`a[data-astrojobs-cta]`).forEach(e=>e.addEventListener(`click`,()=>{window.fathom?.trackEvent(`Docs: Astro.jobs campaign click`)}));</script>
+				</div>
+			</div>
+		
+				</div>
+			</aside>
 	<div class="main-pane astro-ojrabbd2">
 				
 				<main data-pagefind-body="" class="astro-5rh3l5p7" lang="en" dir="ltr">
 					
-					<div class="sl-banner astro-hbtb6hkg" data-pagefind-ignore="" data-sl-id="f303">¡Astro v7 ya está aquí! <a href="https://docs.astro.build/en/guides/upgrade-to/v7">Aprende cómo actualizar tu sitio</a></div>
-					<div class="content-panel astro-g42ntuwh">
+					
+					
+								<div class="content-panel astro-g42ntuwh">
 	<div class="sl-container astro-g42ntuwh">
-								<div class="hero astro-azvfnxsx">
-	<div class="grid-bg astro-azvfnxsx"></div>
-	<div id="_top" class="hero-content stack astro-azvfnxsx" style="--stack-gap: 2rem;">
-		<div class="stack astro-azvfnxsx" style="--stack-gap: 1rem;">
-			<h1 class="astro-azvfnxsx" data-sl-id="f304">Documentación de Astro</h1>
-			<p class="astro-azvfnxsx" data-sl-id="f305">Guías, recursos y referencias de API para ayudarte a construir con Astro.</p>
-		</div>
-		<div class="sl-flex actions astro-azvfnxsx">
-			<a class="sl-flex action primary astro-ekguhzzh" href="/install-and-setup/" data-sl-id="f306">Instala Astro
-	<svg aria-hidden="true" class="astro-ekguhzzh astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg></a><a class="sl-flex action minimal astro-ekguhzzh" href="/concepts/why-astro/" data-sl-id="f307">Aprende sobre las características de Astro
-	<svg aria-hidden="true" class="astro-ekguhzzh astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5em;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"></path></svg></a>
-		</div>
-	</div>
-	<div class="mobile-only not-content astro-cqr5qff2">
-	<p class="tagline astro-cqr5qff2" data-sl-id="f308">Desarrollado por Astro y nuestros colaboradores de código abierto. <a href="https://docs.astro.build/en/contribute" class="astro-cqr5qff2">¡Únete a nosotros!</a></p>
+									<h1 id="_top" class="astro-6ip6di3s" data-sl-id="f321">Arquitectura de islas</h1>
+									</div>
 </div>
-<div class="facepile not-content astro-cqr5qff2">
-	<div class="row astro-cqr5qff2">
-					
-					
-<img src="/_astro/36526527_ct6ys.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2"><span class="circle astro-cqr5qff2"></span>
-<img src="/_astro/28299972_Z1GJM7w.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/25897764_1SSDte.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-				</div><div class="row astro-cqr5qff2">
-					
-					<span class="circle astro-cqr5qff2"></span>
-<img src="/_astro/45965090_ZW3vHI.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/59021693_bKNO6.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/213306_2iL3ow.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/108291165_128Cgd.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-				</div><div class="row astro-cqr5qff2">
-					
-					
-<img src="/_astro/88548999_1T5J5O.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/51384119_15Y6Kh.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2"><span class="circle astro-cqr5qff2"></span>
-<img src="/_astro/34116392_Hma1s.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-				</div><div class="row astro-cqr5qff2">
-					
-					
-<img src="/_astro/357379_oyPp3.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2"><span class="astro-cqr5qff2"></span>
-<img src="/_astro/85648028_TPGu.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2"><span class="circle astro-cqr5qff2"></span>
-<img src="/_astro/1369770_OqKAM.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-				</div><div class="row astro-cqr5qff2">
-					
-					
-<img src="/_astro/15145918_Zo78GA.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/602478_Z8BbQm.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/69633530_Z1RvqS7.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/622227_SqHHc.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/11063910_2hQ27k.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/10137_12GObv.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-				</div><div class="row astro-cqr5qff2">
-					
-					
-<img src="/_astro/15368_1lSPXo.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/15368_1lSPXo.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2"><span class="circle astro-cqr5qff2"></span>
-<img src="/_astro/494699_25H3pm.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/6137925_ZbPN5k.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-				</div><div class="row astro-cqr5qff2">
-					
-					
-<img src="/_astro/25839948_1m6mGu.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/19603573_Z1fB9Li.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/10626596_Z1YtAS8.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/188426_Z21yJwG.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/39112954_Z1J5sRf.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/4033662_WtfoT.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-				</div><div class="row astro-cqr5qff2">
-					<p class="tagline astro-cqr5qff2" data-sl-id="f309">Desarrollado por Astro y nuestros colaboradores de código abierto. <a href="https://docs.astro.build/en/contribute" class="astro-cqr5qff2">¡Únete a nosotros!</a></p>
-					
-<img src="/_astro/46791833_ZQQBv8.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/13069_1ewvl9.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/69170106_Z2qp4h9.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-				</div><div class="row astro-cqr5qff2">
-					
-					
-<img src="/_astro/25167721_1zaX2d.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/94928215_21fTt9.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/361671_2u5y17.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2"><span class="circle astro-cqr5qff2"></span>
-				</div><div class="row astro-cqr5qff2">
-					
-					<span class="astro-cqr5qff2"></span>
-<img src="/_astro/44530252_ZIKPur.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/7889778_Z21RHE0.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-<img src="/_astro/81974850_Z25PO7G.webp" loading="eager" alt="" decoding="async" width="84" height="84" class="astro-cqr5qff2">
-				</div>
-</div>
-</div>
-								<div class="sl-markdown-content">
+								<div class="content-panel astro-g42ntuwh">
+	<div class="sl-container astro-g42ntuwh">
+									<div class="sl-markdown-content">
 	
-									<div class="card-grid astro-73ojlivb"><div class="landing-card astro-42u226jt">
-	<article class="card sl-flex astro-v5luwlv2">
-	<p class="title sl-flex astro-v5luwlv2">
-		<svg aria-hidden="true" class="icon astro-v5luwlv2 astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"></path></svg>
-		<span class="astro-v5luwlv2" data-sl-id="f310">¿Qué construirás con Astro?</span>
-	</p>
-	<div class="body astro-v5luwlv2"><p data-sl-id="f311">¡Explora <a href="https://astro.esdocu.com/themes/">temas de inicio de Astro</a> para blogs, portafolios, documentación, páginas de destino, SaaS, marketing, sitios de comercio electrónico y más!</p></div>
-</article>
-</div><div class="landing-card astro-42u226jt">
-	<article class="card sl-flex astro-v5luwlv2">
-	<p class="title sl-flex astro-v5luwlv2">
-		<svg aria-hidden="true" class="icon astro-v5luwlv2 astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M22 9.67a1 1 0 0 0-.86-.67l-5.69-.83L12.9 3a1 1 0 0 0-1.8 0L8.55 8.16 2.86 9a1 1 0 0 0-.81.68 1 1 0 0 0 .25 1l4.13 4-1 5.68a1 1 0 0 0 1.45 1.07L12 18.76l5.1 2.68c.14.08.3.12.46.12a1 1 0 0 0 .99-1.19l-1-5.68 4.13-4A1 1 0 0 0 22 9.67Zm-6.15 4a1 1 0 0 0-.29.89l.72 4.19-3.76-2a1 1 0 0 0-.94 0l-3.76 2 .72-4.19a1 1 0 0 0-.29-.89l-3-3 4.21-.61a1 1 0 0 0 .76-.55L12 5.7l1.88 3.82a1 1 0 0 0 .76.55l4.21.61-3 2.99Z"></path></svg>
-		<span class="astro-v5luwlv2" data-sl-id="f312">Realiza un recorrido guiado</span>
-	</p>
-	<div class="body astro-v5luwlv2"><p data-sl-id="f313">Completa nuestro <a href="https://docs.astro.build/en/tutorial/0-introduction">Tutorial: Construye un blog</a> introductorio para aprender los conceptos básicos y crear tu primer sitio de Astro.</p></div>
-</article>
-</div><div class="card--fullwidth astro-lpzwagy7">
-	<article class="card sl-flex astro-v5luwlv2">
-	<p class="title sl-flex astro-v5luwlv2">
-		<svg aria-hidden="true" class="icon astro-v5luwlv2 astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg>
-		<span class="astro-v5luwlv2" data-sl-id="f314">Comienza un nuevo proyecto</span>
-	</p>
-	<div class="body astro-v5luwlv2">
-		<div class="split astro-lpzwagy7">
-			<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.rvnnt.css"><script type="module" src="/_astro/ec.0vx5m.js"></script><figure class="frame is-terminal not-content"><figcaption class="header" data-sl-id="f315"><span class="title"></span><span class="sr-only">Ventana de la terminal</span></figcaption><pre data-language="sh"><code><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F"># create a new project with npm</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">npm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">create</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">astro@latest</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copiar al portapapeles" data-copied="Copied!" data-code="npm create astro@latest"><div></div></button></div></figure></div><p data-sl-id="f316">Nuestra <a href="/install-and-setup/">guía de instalación</a> tiene instrucciones paso a paso para instalar Astro usando nuestro asistente de CLI, crear un nuevo proyecto a partir de un repositorio de GitHub de Astro existente y para instalar Astro manualmente.</p>
-		</div>
-	</div>
-</article>
-</div><div class="landing-card astro-42u226jt">
-	<article class="card sl-flex astro-v5luwlv2">
-	<p class="title sl-flex astro-v5luwlv2">
-		<svg aria-hidden="true" class="icon astro-v5luwlv2 astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M21.17 2.06A13.1 13.1 0 0 0 19 1.87a12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2 13.1 13.1 0 0 0-2.17.19 1 1 0 0 0-.83 1v12a1 1 0 0 0 1.17 1 10.9 10.9 0 0 1 8.25 1.91l.12.07h.11a.91.91 0 0 0 .7 0h.11l.12-.07A10.899 10.899 0 0 1 20.83 16 1 1 0 0 0 22 15V3a1 1 0 0 0-.83-.94ZM11 15.35a12.87 12.87 0 0 0-6-1.48H4v-10c.333-.02.667-.02 1 0a10.86 10.86 0 0 1 6 1.8v9.68Zm9-1.44h-1a12.87 12.87 0 0 0-6 1.48V5.67a10.86 10.86 0 0 1 6-1.8c.333-.02.667-.02 1 0v10.04Zm1.17 4.15a13.098 13.098 0 0 0-2.17-.19 12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2.05c-.727.003-1.453.066-2.17.19A1 1 0 0 0 2 19.21a1 1 0 0 0 1.17.79 10.9 10.9 0 0 1 8.25 1.91 1 1 0 0 0 1.16 0A10.9 10.9 0 0 1 20.83 20a1 1 0 0 0 1.17-.79 1 1 0 0 0-.83-1.15Z"></path></svg>
-		<span class="astro-v5luwlv2" data-sl-id="f317">Aprender</span>
-	</p>
-	<div class="body astro-v5luwlv2">
-	<div class="link-list astro-fvhmjko4">
-		<ul>
-<li><a href="/concepts/why-astro/" data-sl-id="f318">Características principales de Astro</a></li>
-<li><a href="/concepts/islands/" data-sl-id="f319">Arquitectura de islas</a></li>
-<li><a href="https://docs.astro.build/en/basics/astro-components" data-sl-id="f320">Componentes de Astro</a></li>
-<li><a href="https://docs.astro.build/en/reference/astro-syntax" data-sl-id="f321">La sintaxis de plantillas de Astro</a></li>
+										
+<p data-sl-id="f322">Astro ayudó a ser pionero y popularizar un nuevo patrón de arquitectura frontend llamado <strong>Arquitectura de islas (Islands Architecture).</strong> La arquitectura de islas funciona renderizando la mayor parte de tu página en HTML rápido y estático, añadiendo pequeñas “islas” de JavaScript cuando se necesita interactividad o personalización en la página (un carrusel de imágenes, por ejemplo). Esto evita las cargas útiles de JavaScript monolíticas que ralentizan la capacidad de respuesta de muchos otros frameworks web de JavaScript modernos.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="a-brief-history" data-sl-id="f323">Una breve historia</h2><a class="sl-anchor-link" href="#a-brief-history" data-sl-id="f324"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Sección titulada “Una breve historia”</span></a></div>
+<p data-sl-id="f325">El término “isla de componentes” (component island) fue acuñado por primera vez por la arquitecta de frontend de Etsy, <a href="https://sylormiller.com/">Katie Sylor-Miller</a> en 2019. Esta idea fue expandida y documentada posteriormente en <a href="https://jasonformat.com/islands-architecture/">esta publicación</a> por el creador de Preact, Jason Miller, el 11 de agosto de 2020.</p>
+<blockquote>
+<p data-sl-id="f326">La idea general de una arquitectura de “islas” (Islands) es engañosamente simple: renderizar páginas HTML en el servidor e inyectar marcadores de posición o slots alrededor de regiones altamente dinámicas […] que luego pueden ser “hidratadas” en el cliente en pequeños widgets autónomos, reutilizando su HTML inicial renderizado en el servidor.<br>
+— Jason Miller, creador de Preact</p>
+</blockquote>
+<p data-sl-id="f327">La técnica sobre la que se basa este patrón arquitectónico también se conoce como hidratación <strong>parcial</strong> o <strong>selectiva.</strong></p>
+<p data-sl-id="f328">Por el contrario, la mayoría de los frameworks web basados en JavaScript hidratan y renderizan un sitio web completo como una única gran aplicación de JavaScript (también conocida como aplicación de una sola página o SPA). Las SPAs ofrecen simplicidad y potencia, pero sufren de problemas de rendimiento al cargar la página debido al uso intensivo de JavaScript en el lado del cliente.</p>
+<p data-sl-id="f329">Las SPAs tienen su lugar, incluso <a href="https://docs.astro.build/en/guides/migrate-to-astro/from-create-react-app">integradas dentro de una página de Astro</a>. Sin embargo, las SPAs carecen de la capacidad nativa de hidratar de forma selectiva y estratégica, lo que las convierte en una opción exagerada para la mayoría de los proyectos en la web hoy en día.</p>
+<p data-sl-id="f330">Astro se popularizó como el primer framework web de JavaScript convencional con hidratación selectiva integrada, utilizando el mismo patrón de islas de componentes acuñado por Sylor-Miller. Desde entonces, hemos ampliado y evolucionado el trabajo original de Sylor-Miller, lo que ayudó a inspirar un enfoque similar de islas de componentes para el contenido renderizado dinámicamente en el servidor.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="what-is-an-island" data-sl-id="f331">¿Qué es una isla?</h2><a class="sl-anchor-link" href="#what-is-an-island" data-sl-id="f332"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Sección titulada “¿Qué es una isla?”</span></a></div>
+<p data-sl-id="f333">En Astro, una isla es un componente de UI mejorado en una página de HTML por lo demás estática.</p>
+<p data-sl-id="f334">Una <a href="#client-islands"><strong>isla de cliente</strong></a> es un componente de interfaz de usuario de JavaScript interactivo que se hidrata por separado del resto de la página, mientras que una <a href="#server-islands"><strong>isla de servidor</strong></a> es un componente de interfaz de usuario que renderiza en el servidor su contenido dinámico por separado del resto de la página.</p>
+<p data-sl-id="f335">Ambas islas ejecutan procesos costosos o más lentos de forma independiente, componente por componente, para optimizar la carga de la página.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="island-components" data-sl-id="f336">Componentes de isla</h2><a class="sl-anchor-link" href="#island-components" data-sl-id="f337"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Sección titulada “Componentes de isla”</span></a></div>
+<p data-sl-id="f338">Los componentes de Astro son los bloques de construcción de tu plantilla de página. Se renderizan a HTML estático sin tiempo de ejecución en el lado del cliente.</p>
+<p data-sl-id="f339">Piensa en una isla de cliente como un widget interactivo que flota en un mar de HTML renderizado en el servidor, que por lo demás es estático y ligero. Las islas de servidor se pueden añadir para elementos dinámicos o personalizados renderizados en el servidor, como la foto de perfil de un visitante que ha iniciado sesión.</p>
+<div class="diagram not-content astro-str5vk2j">
+	<div class="header app astro-str5vk2j" data-sl-id="f340">Encabezado (isla interactiva)</div>
+	<div class="sidebar astro-str5vk2j" data-sl-id="f341">Barra lateral (HTML estático)</div>
+	<div class="main astro-str5vk2j"><p data-sl-id="f342">Contenido estático como texto, imágenes, etc.</p></div>
+	<div class="carousel app astro-str5vk2j" data-sl-id="f343">Carrusel de imágenes (isla interactiva)</div>
+	<div class="footer astro-str5vk2j" data-sl-id="f344">Pie de página (HTML estático)</div>
+</div>
+
+<p class="credit astro-str5vk2j" data-sl-id="f345">Fuente: <a href="https://jasonformat.com/islands-architecture/">Islands Architecture: Jason Miller</a></p>
+<p data-sl-id="f346">Una isla siempre se ejecuta de forma aislada de otras islas en la página, y pueden existir múltiples islas en una misma página. Las islas de cliente aún pueden compartir estado y comunicarse entre sí, aunque se ejecuten en diferentes contextos de componentes.</p>
+<p data-sl-id="f347">Esta flexibilidad permite que Astro sea compatible con múltiples frameworks de UI como <a href="https://react.dev/">React</a>, <a href="https://preactjs.com/">Preact</a>, <a href="https://svelte.dev/">Svelte</a>, <a href="https://vuejs.org/">Vue</a> y <a href="https://www.solidjs.com/">SolidJS</a>. Debido a que son independientes, incluso puedes mezclar varios frameworks en cada página.</p>
+<aside aria-label="Consejo" class="starlight-aside starlight-aside--tip"><p class="starlight-aside__title" aria-hidden="true" data-sl-id="f348"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="starlight-aside__icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.43909 8.85483L1.44039 8.85354L4.96668 5.33815C5.30653 4.99386 5.7685 4.79662 6.2524 4.78972L6.26553 4.78963L12.9014 4.78962L13.8479 3.84308C16.9187 0.772319 20.0546 0.770617 21.4678 0.975145C21.8617 1.02914 22.2271 1.21053 22.5083 1.4917C22.7894 1.77284 22.9708 2.13821 23.0248 2.53199C23.2294 3.94517 23.2278 7.08119 20.1569 10.1521L19.2107 11.0983V17.7338L19.2106 17.7469C19.2037 18.2308 19.0067 18.6933 18.6624 19.0331L15.1456 22.5608C14.9095 22.7966 14.6137 22.964 14.29 23.0449C13.9663 23.1259 13.6267 23.1174 13.3074 23.0204C12.9881 22.9235 12.7011 22.7417 12.4771 22.4944C12.2533 22.2473 12.1006 21.9441 12.0355 21.6171L11.1783 17.3417L6.65869 12.822L4.34847 12.3589L2.38351 11.965C2.05664 11.8998 1.75272 11.747 1.50564 11.5232C1.25835 11.2992 1.07653 11.0122 0.979561 10.6929C0.882595 10.3736 0.874125 10.034 0.955057 9.7103C1.03599 9.38659 1.20328 9.09092 1.43909 8.85483ZM6.8186 10.8724L2.94619 10.096L6.32006 6.73268H10.9583L6.8186 10.8724ZM15.2219 5.21703C17.681 2.75787 20.0783 2.75376 21.1124 2.8876C21.2462 3.92172 21.2421 6.31895 18.783 8.77812L12.0728 15.4883L8.51172 11.9272L15.2219 5.21703ZM13.9042 21.0538L13.1279 17.1811L17.2676 13.0414V17.68L13.9042 21.0538Z"></path><path d="M9.31827 18.3446C9.45046 17.8529 9.17864 17.3369 8.68945 17.1724C8.56178 17.1294 8.43145 17.1145 8.30512 17.1243C8.10513 17.1398 7.91519 17.2172 7.76181 17.3434C7.62613 17.455 7.51905 17.6048 7.45893 17.7835C6.97634 19.2186 5.77062 19.9878 4.52406 20.4029C4.08525 20.549 3.6605 20.644 3.29471 20.7053C3.35607 20.3395 3.45098 19.9148 3.59711 19.476C4.01221 18.2294 4.78141 17.0237 6.21648 16.5411C6.39528 16.481 6.54504 16.3739 6.65665 16.2382C6.85126 16.0016 6.92988 15.678 6.84417 15.3647C6.83922 15.3466 6.83373 15.3286 6.82767 15.3106C6.74106 15.053 6.55701 14.8557 6.33037 14.7459C6.10949 14.6389 5.84816 14.615 5.59715 14.6994C5.47743 14.7397 5.36103 14.7831 5.24786 14.8294C3.22626 15.6569 2.2347 17.4173 1.75357 18.8621C1.49662 19.6337 1.36993 20.3554 1.30679 20.8818C1.27505 21.1464 1.25893 21.3654 1.25072 21.5213C1.24662 21.5993 1.24448 21.6618 1.24337 21.7066L1.243 21.7226L1.24235 21.7605L1.2422 21.7771L1.24217 21.7827L1.24217 21.7856C1.24217 22.3221 1.67703 22.7579 2.2137 22.7579L2.2155 22.7579L2.22337 22.7578L2.23956 22.7577C2.25293 22.7575 2.27096 22.7572 2.29338 22.7567C2.33821 22.7555 2.40073 22.7534 2.47876 22.7493C2.63466 22.7411 2.85361 22.725 3.11822 22.6932C3.64462 22.6301 4.36636 22.5034 5.13797 22.2464C6.58274 21.7653 8.3431 20.7738 9.17063 18.7522C9.21696 18.639 9.26037 18.5226 9.30064 18.4029C9.30716 18.3835 9.31304 18.364 9.31827 18.3446Z"></path></svg>Consejo</p><div class="starlight-aside__content"><p data-sl-id="f349">Aunque la mayoría de los desarrolladores se limitarán a usar un solo framework de UI, Astro admite múltiples frameworks en el mismo proyecto. Esto te permite:</p><ul>
+<li data-sl-id="f350">Elegir el framework que sea mejor para cada componente.</li>
+<li data-sl-id="f351">Aprender un nuevo framework sin necesidad de comenzar un nuevo proyecto.</li>
+<li data-sl-id="f352">Colaborar con otros incluso cuando se trabaja en diferentes frameworks.</li>
+<li data-sl-id="f353">Convertir incrementalmente un sitio existente a otro framework sin tiempo de inactividad.</li>
+</ul></div></aside>
+<div class="sl-heading-wrapper level-h2"><h2 id="client-islands" data-sl-id="f354">Islas de cliente</h2><a class="sl-anchor-link" href="#client-islands" data-sl-id="f355"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Sección titulada “Islas de cliente”</span></a></div>
+<p data-sl-id="f356">Por defecto, Astro renderizará automáticamente cada componente de interfaz de usuario a solo HTML y CSS, <strong>eliminando todo el JavaScript del lado del cliente de forma automática.</strong></p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.rvnnt.css"><script type="module" src="/_astro/ec.0vx5m.js"></script><figure class="frame has-title not-content"><figcaption class="header" data-sl-id="f357"><span class="title">src/pages/index.astro</span></figcaption><pre data-language="astro"><code><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#8844AE">&lt;</span><span style="--0:#C5E478;--1:#3B61B0">MyReactComponent</span><span style="--0:#7FDBCA;--1:#8844AE"> /&gt;</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copiar al portapapeles" data-copied="Copied!" data-code="<MyReactComponent />"><div></div></button></div></figure></div>
+<p data-sl-id="f358">Esto puede sonar estricto, pero este comportamiento es lo que mantiene los sitios web de Astro rápidos por defecto y protege a los desarrolladores de enviar accidentalmente JavaScript innecesario o no deseado que podría ralentizar su sitio web.</p>
+<p data-sl-id="f359">Convertir cualquier componente de UI estático en una isla interactiva requiere únicamente una directiva <code dir="auto">client:*</code>. Astro entonces construye y empaqueta automáticamente tu JavaScript del lado del cliente para un rendimiento optimizado.</p>
+<div class="expressive-code"><figure class="frame has-title not-content"><figcaption class="header" data-sl-id="f360"><span class="title">src/pages/index.astro</span></figcaption><pre data-language="astro"><code><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F">&lt;!-- This component is now interactive on the page!</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#919F9F;--1:#5F636F">     </span></span><span style="--0:#919F9F;--1:#5F636F">The rest of your website remains static. --&gt;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#8844AE">&lt;</span><span style="--0:#C5E478;--1:#3B61B0">MyReactComponent</span><span style="--0:#7FDBCA;--1:#8844AE"> </span><ins><span style="--0:#C5E478;--1:#2d4a87">client:load</span></ins><span style="--0:#7FDBCA;--1:#8844AE"> /&gt;</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copiar al portapapeles" data-copied="Copied!" data-code="<!-- This component is now interactive on the page!     The rest of your website remains static. --><MyReactComponent client:load />"><div></div></button></div></figure></div>
+<p data-sl-id="f361">Con las islas, el JavaScript del lado del cliente solo se carga para los componentes interactivos explícitos que marques usando las directivas <code dir="auto">client:*</code>.</p>
+<p data-sl-id="f362">Y debido a que la interacción se configura a nivel de componente, puedes manejar diferentes prioridades de carga para cada componente según su uso. Por ejemplo, <code dir="auto">client:idle</code> le indica a un componente que se cargue cuando el navegador esté inactivo, y <code dir="auto">client:visible</code> le indica a un componente que se cargue solo una vez que entre en el viewport.</p>
+<h3 data-sl-id="f363">Beneficios de las islas de cliente</h3>
+<p data-sl-id="f364">El beneficio más obvio de construir con islas de Astro es el rendimiento: la mayor parte de tu sitio web se convierte en HTML rápido y estático, y JavaScript solo se carga para los componentes individuales que lo necesitan. JavaScript es uno de los recursos más lentos que puedes cargar por byte, por lo que cada byte cuenta.</p>
+<p data-sl-id="f365">Otro beneficio es la carga paralela. En la ilustración de ejemplo anterior, la isla de baja prioridad “carrusel de imágenes” no necesita bloquear a la isla de alta prioridad “encabezado”. Ambos se cargan en paralelo e hidratan de forma aislada, lo que significa que el encabezado se vuelve interactivo de inmediato sin tener que esperar al carrusel más pesado de la parte inferior de la página.</p>
+<p data-sl-id="f366">Aún mejor, puedes indicarle a Astro exactamente cómo y cuándo renderizar cada componente. Si ese carrusel de imágenes es realmente costoso de cargar, puedes adjuntar una <a href="https://docs.astro.build/en/reference/directives-reference">directiva de cliente</a> especial que le indique a Astro que solo cargue el carrusel cuando sea visible en la página. Si el usuario nunca lo ve, nunca se carga.</p>
+<p data-sl-id="f367">En Astro, depende de ti como desarrollador indicarles explícitamente a Astro qué componentes de la página deben ejecutarse también en el navegador. Astro solo hidratará exactamente lo que se necesita en la página y dejará el resto de tu sitio como HTML estático.</p>
+<p data-sl-id="f368"><strong>¡Las islas de cliente son el secreto detrás de la historia de rendimiento rápido por defecto de Astro!</strong></p>
+<div class="read-more astro-veghvfl5">
+	<svg aria-hidden="true" class="icon astro-veghvfl5 astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.17 2.06A13.1 13.1 0 0 0 19 1.87a12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2 13.1 13.1 0 0 0-2.17.19 1 1 0 0 0-.83 1v12a1 1 0 0 0 1.17 1 10.9 10.9 0 0 1 8.25 1.91l.12.07h.11a.91.91 0 0 0 .7 0h.11l.12-.07A10.899 10.899 0 0 1 20.83 16 1 1 0 0 0 22 15V3a1 1 0 0 0-.83-.94ZM11 15.35a12.87 12.87 0 0 0-6-1.48H4v-10c.333-.02.667-.02 1 0a10.86 10.86 0 0 1 6 1.8v9.68Zm9-1.44h-1a12.87 12.87 0 0 0-6 1.48V5.67a10.86 10.86 0 0 1 6-1.8c.333-.02.667-.02 1 0v10.04Zm1.17 4.15a13.098 13.098 0 0 0-2.17-.19 12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2.05c-.727.003-1.453.066-2.17.19A1 1 0 0 0 2 19.21a1 1 0 0 0 1.17.79 10.9 10.9 0 0 1 8.25 1.91 1 1 0 0 0 1.16 0A10.9 10.9 0 0 1 20.83 20a1 1 0 0 0 1.17-.79 1 1 0 0 0-.83-1.15Z"></path></svg>
+	<span class="astro-veghvfl5" data-sl-id="f369">Lee más sobre el <a href="https://docs.astro.build/en/guides/framework-components">uso de componentes de frameworks de JavaScript</a> en tu proyecto.</span>
+</div>
+<div class="sl-heading-wrapper level-h2"><h2 id="server-islands" data-sl-id="f370">Islas de servidor</h2><a class="sl-anchor-link" href="#server-islands" data-sl-id="f371"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Sección titulada “Islas de servidor”</span></a></div>
+<p data-sl-id="f372">Las islas de servidor son una forma de apartar el código del lado del servidor lento o costoso del proceso de renderizado principal, facilitando la combinación de HTML estático de alto rendimiento y componentes dinámicos generados por el servidor.</p>
+<p data-sl-id="f373">Añade la <a href="https://docs.astro.build/en/reference/directives-reference">directiva <code dir="auto">server:defer</code></a> a cualquier componente de Astro en tu página para convertirlo en su propia isla de servidor:</p>
+<div class="expressive-code"><figure class="frame has-title not-content"><figcaption class="header" data-sl-id="f374"><span class="title">src/pages/index.astro</span></figcaption><pre data-language="astro"><code><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F">---</span></div></div><div class="ec-line"><div class="code"><span style="--0:#C792EA;--1:#8844AE">import</span><span style="--0:#D6DEEB;--1:#403F53"> Avatar </span><span style="--0:#C792EA;--1:#8844AE">from</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#984E4D">../components/Avatar.astro</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#D6DEEB;--1:#403F53">;</span></div></div><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F">---</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#8844AE">&lt;</span><span style="--0:#C5E478;--1:#3B61B0">Avatar</span><span style="--0:#7FDBCA;--1:#8844AE"> </span><mark><span style="--0:#C5E478;--1:#325295">server:defer</span></mark><span style="--0:#7FDBCA;--1:#8844AE"> /&gt;</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copiar al portapapeles" data-copied="Copied!" data-code="---import Avatar from &quot;../components/Avatar.astro&quot;;---<Avatar server:defer />"><div></div></button></div></figure></div>
+<p data-sl-id="f375">Esto divide tu página en áreas más pequeñas de contenido renderizado en el servidor que se cargan en paralelo.</p>
+<p data-sl-id="f376">El contenido principal de tu página se puede renderizar inmediatamente con contenido de marcador de posición, como un avatar genérico, hasta que el contenido de la propia isla esté disponible. Con las islas de servidor, tener pequeños componentes de contenido personalizado no retrasa el renderizado de una página que, de lo contrario, sería estática.</p>
+<p data-sl-id="f377">Este patrón de renderizado fue creado para ser portable. No depende de ninguna infraestructura de servidor, por lo que funcionará con cualquier host, desde un servidor Node.js en un contenedor Docker hasta el proveedor serverless de tu elección.</p>
+<h3 data-sl-id="f378">Beneficios de las islas de servidor</h3>
+<p data-sl-id="f379">Un beneficio de las islas de servidor es la capacidad de renderizar sobre la marcha las partes más dinámicas de tu página. Esto permite que la estructura externa y el contenido principal se almacenen en caché de manera más agresiva, proporcionando un rendimiento más rápido.</p>
+<p data-sl-id="f380">Otro beneficio es proporcionar una excelente experiencia al visitante. Las islas de servidor están optimizadas y se cargan rápidamente, a menudo incluso antes de que el navegador haya dibujado la página. Pero en el corto tiempo que tardan tus islas en renderizarse, puedes mostrar contenido alternativo personalizado y evitar cualquier cambio en el diseño (layout shift).</p>
+<p data-sl-id="f381">Un ejemplo de un sitio que se beneficia de las islas de servidor de Astro es una tienda de comercio electrónico. Aunque el contenido principal de las páginas de productos cambia con poca frecuencia, estas páginas suelen tener algunas piezas dinámicas:</p>
+<ul>
+<li data-sl-id="f382">El avatar del usuario en el encabezado.</li>
+<li data-sl-id="f383">Ofertas especiales y rebajas para el producto.</li>
+<li data-sl-id="f384">Reseñas de los usuarios.</li>
 </ul>
-	</div>
+<p data-sl-id="f385">Al usar islas de servidor para estos elementos, el visitante verá la parte más importante de la página, tu producto, de inmediato. Se pueden mostrar avatares genéricos, indicadores de carga y anuncios de la tienda como contenido alternativo hasta que las partes personalizadas estén disponibles.</p>
+<div class="read-more astro-veghvfl5">
+	<svg aria-hidden="true" class="icon astro-veghvfl5 astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.17 2.06A13.1 13.1 0 0 0 19 1.87a12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2 13.1 13.1 0 0 0-2.17.19 1 1 0 0 0-.83 1v12a1 1 0 0 0 1.17 1 10.9 10.9 0 0 1 8.25 1.91l.12.07h.11a.91.91 0 0 0 .7 0h.11l.12-.07A10.899 10.899 0 0 1 20.83 16 1 1 0 0 0 22 15V3a1 1 0 0 0-.83-.94ZM11 15.35a12.87 12.87 0 0 0-6-1.48H4v-10c.333-.02.667-.02 1 0a10.86 10.86 0 0 1 6 1.8v9.68Zm9-1.44h-1a12.87 12.87 0 0 0-6 1.48V5.67a10.86 10.86 0 0 1 6-1.8c.333-.02.667-.02 1 0v10.04Zm1.17 4.15a13.098 13.098 0 0 0-2.17-.19 12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2.05c-.727.003-1.453.066-2.17.19A1 1 0 0 0 2 19.21a1 1 0 0 0 1.17.79 10.9 10.9 0 0 1 8.25 1.91 1 1 0 0 0 1.16 0A10.9 10.9 0 0 1 20.83 20a1 1 0 0 0 1.17-.79 1 1 0 0 0-.83-1.15Z"></path></svg>
+	<span class="astro-veghvfl5" data-sl-id="f386">Lee más sobre el <a href="https://docs.astro.build/en/guides/server-islands">uso de islas de servidor</a> en tu proyecto.</span>
 </div>
-</article>
-</div><div class="landing-card astro-42u226jt">
-	<article class="card sl-flex astro-v5luwlv2">
-	<p class="title sl-flex astro-v5luwlv2">
-		<svg aria-hidden="true" class="icon astro-v5luwlv2 astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M17 22H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h1a4 4 0 0 1 7.3-2.18c.448.64.692 1.4.7 2.18h3a1 1 0 0 1 1 1v3a4 4 0 0 1 2.18 7.3A3.86 3.86 0 0 1 18 18v3a1 1 0 0 1-1 1ZM5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11v-3.18a1 1 0 0 1 1.33-.95 1.77 1.77 0 0 0 1.74-.23 2 2 0 0 0 .93-1.37 2 2 0 0 0-.48-1.59 1.89 1.89 0 0 0-2.17-.55 1 1 0 0 1-1.33-.95V8h-3.2a1 1 0 0 1-1-1.33 1.77 1.77 0 0 0-.23-1.74 1.939 1.939 0 0 0-3-.43A2 2 0 0 0 8 6c.002.23.046.456.13.67A1 1 0 0 1 7.18 8H5Z"></path></svg>
-		<span class="astro-v5luwlv2" data-sl-id="f322">Extiende</span>
-	</p>
-	<div class="body astro-v5luwlv2">
-	<div class="link-list astro-fvhmjko4">
-		<ul>
-<li data-sl-id="f323"><a href="https://docs.astro.build/en/guides/integrations">Añade integraciones como React y Partytown</a></li>
-<li><a href="https://docs.astro.build/en/guides/content-collections" data-sl-id="f324">Crea colecciones de contenido con seguridad de tipos</a></li>
-<li data-sl-id="f325"><a href="https://docs.astro.build/en/guides/view-transitions">Mejora la navegación con transiciones de vista</a></li>
-<li data-sl-id="f326"><a href="https://docs.astro.build/en/guides/cms">Conecta un CMS headless a tu proyecto</a></li>
-</ul>
-	</div>
-</div>
-</article>
-</div></div><div class="discord astro-whktuvqw">
-	<h2 class="astro-whktuvqw" data-sl-id="f327">¿Tienes alguna pregunta o quieres participar?</h2>
-	<div class="cta astro-whktuvqw">
-		
-<img src="/_astro/houston_love.BttrNCcZ_ZWYTdq.webp" alt="" loading="lazy" decoding="async" width="292" height="293" class="hide astro-whktuvqw">
-		<a class="sl-flex action secondary astro-ekguhzzh" href="https://astro.esdocu.com/chat" data-sl-id="f328">Únete a nuestro Discord</a>
-	</div>
-</div>
-								
+									
 
 	
 	
@@ -1288,54 +1301,66 @@
 	
 	
 	
-	<span id="docsearch-lvl0" hidden="" data-sl-id="f329">Aprender</span>
+	<span id="docsearch-lvl0" hidden="" data-sl-id="f387">Aprender</span>
 </div>
-								<div class="hide-when-toc-is-visible astro-jf74usjm">
-	<div class="container astro-3njibiid" lang="en" dir="ltr" data-algolia-exclude="">
-	<aside aria-labelledby="learn-astro-course-1" class="astro-3njibiid">
-		
-<img src="/_astro/CodingInPublic.DpaYu7Qd_1BEEUO.webp" alt="" loading="lazy" decoding="async" width="130" height="131" class="astro-3njibiid">
-		<h2 id="learn-astro-course-1" class="astro-3njibiid" data-sl-id="f330">Aprende Astro con <strong class="astro-3njibiid">Coding in Public</strong></h2>
-		<p class="sl-flex astro-3njibiid">
-			<span class="sl-flex astro-3njibiid" style="gap: 0.25rem; align-items: center;" data-sl-id="f331"><svg fill="currentColor" viewBox="0 0 18 18" aria-hidden="true" class="astro-3njibiid">
-					<path d="M12 7.7 8.25 5.53A1.5 1.5 0 0 0 6 6.83v4.34a1.5 1.5 0 0 0 2.25 1.3L12 10.3a1.5 1.5 0 0 0 0-2.6ZM11.25 9 7.5 11.17V6.83L11.25 9ZM9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM9 15A6 6 0 1 1 9 3a6 6 0 0 1 0 12Z" class="astro-3njibiid"></path>
-				</svg>
-				<span class="astro-3njibiid">Más de 150 lecciones en video</span></span>
-			<span class="astro-3njibiid">•</span>
-			<span class="astro-3njibiid" data-sl-id="f332">Listo para Astro v5</span>
-		</p>
-		<a class="sl-link-button not-content primary cta astro-3njibiid astro-b66feiu3" href="https://learnastro.dev?code=ASTRO_PROMO" data-learn-astro-cta="true" data-sl-id="f333">Consigue un 20% de descuento</a>
+									<div class="hide-when-toc-is-visible astro-jf74usjm">
+	<div class="container astro-2qw6dox2" lang="en" dir="ltr" data-algolia-exclude="">
+	<aside aria-labelledby="learn-astro-course-2" class="astro-2qw6dox2">
+		<div class="graphics astro-2qw6dox2">
+			
+<img src="/_astro/Scrimba.ByZ1pAIN_Z1aWGoT.webp" alt="Scrimba" loading="lazy" decoding="async" width="72" height="72" class="scrimba-bubble astro-2qw6dox2">
+			
+<img src="/_astro/JamesQuick.BYVczE5K_Z27j1Lz.webp" alt="" loading="lazy" decoding="async" width="72" height="72" class="astro-2qw6dox2">
+		</div>
+		<h2 id="learn-astro-course-2" class="astro-2qw6dox2" data-sl-id="f388"><strong class="astro-2qw6dox2">Aprende Astro</strong> con James Q Quick</h2>
+		<p class="astro-2qw6dox2" data-sl-id="f389">Construye tu primer sitio con 35 lecciones interactivas de Scrimba</p>
+		<a class="sl-link-button not-content primary cta astro-2qw6dox2 astro-b66feiu3" href="https://scrimba.com/intro-to-astro-c00ar0fi5u?via=astro" data-scrimba-cta="true" data-sl-id="f390">Consigue un 20% de descuento</a>
 	</aside>
 </div>
 
-<script type="module">document.querySelectorAll(`a[data-learn-astro-cta]`).forEach(e=>e.addEventListener(`click`,()=>{window.fathom?.trackEvent(`Docs: Coding in Public campaign click`)}));</script>
+<script type="module">document.querySelectorAll(`a[data-scrimba-cta]`).forEach(e=>e.addEventListener(`click`,()=>{window.fathom?.trackEvent(`Docs: Scrimba campaign click`)}));</script>
 </div>
 <footer class="sl-flex astro-sa7oidru">
 	<div class="meta sl-flex astro-sa7oidru">
-		
+		<div class="sl-flex astro-2imzdnes">
+			<a href="https://github.com/withastro/docs/edit/main/src/content/docs/en/concepts/islands.mdx" class="sl-flex astro-2imzdnes" data-sl-id="f391"><svg aria-hidden="true" class="astro-2imzdnes astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path d="M22 7.24a1 1 0 0 0-.29-.71l-4.24-4.24a1 1 0 0 0-1.1-.22 1 1 0 0 0-.32.22l-2.83 2.83L2.29 16.05a1 1 0 0 0-.29.71V21a1 1 0 0 0 1 1h4.24a1 1 0 0 0 .76-.29l10.87-10.93L21.71 8c.1-.1.17-.2.22-.33a1 1 0 0 0 0-.24v-.14l.07-.05ZM6.83 20H4v-2.83l9.93-9.93 2.83 2.83L6.83 20ZM18.17 8.66l-2.83-2.83 1.42-1.41 2.82 2.82-1.41 1.42Z"></path></svg>
+				Editar página</a>
+			<a href="https://contribute.docs.astro.build/guides/i18n/" class="sl-flex astro-2imzdnes" data-sl-id="f392"><svg aria-hidden="true" class="astro-2imzdnes astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"></path></svg> Traducir esta página</a>
+		</div>
 		
 	</div>
 	<div class="pagination-links print:hidden astro-5fmgv6sm" dir="ltr">
-	
-	
+	<a href="/concepts/why-astro/" rel="prev" class="astro-5fmgv6sm" data-sl-id="f393"><svg aria-hidden="true" class="astro-5fmgv6sm astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"></path></svg>
+				<span class="astro-5fmgv6sm">
+					Anterior
+					<br class="astro-5fmgv6sm">
+					<span class="link-title astro-5fmgv6sm">¿Por qué Astro?</span>
+				</span></a>
+	<a href="https://docs.astro.build/en/astro-courses" rel="next" class="astro-5fmgv6sm" data-sl-id="f394"><svg aria-hidden="true" class="astro-5fmgv6sm astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"></path></svg>
+				<span class="astro-5fmgv6sm">
+					Siguiente
+					<br class="astro-5fmgv6sm">
+					<span class="link-title astro-5fmgv6sm">Cursos</span>
+				</span></a>
 </div>
 
 	
 </footer>
 <section class="sl-flex astro-3f4rfcpt">
-	<a href="https://docs.astro.build/en/contribute" class="sl-flex astro-3f4rfcpt" data-sl-id="f334"><svg aria-hidden="true" class="astro-3f4rfcpt astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg>
+	<a href="https://docs.astro.build/en/contribute" class="sl-flex astro-3f4rfcpt" data-sl-id="f395"><svg aria-hidden="true" class="astro-3f4rfcpt astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg>
 		Contribuir</a>
 
-	<a href="https://astro.esdocu.com/chat" class="sl-flex astro-3f4rfcpt" data-sl-id="f335"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="width:1.2em;height:1.2em;" class="astro-3f4rfcpt">
+	<a href="https://astro.esdocu.com/chat" class="sl-flex astro-3f4rfcpt" data-sl-id="f396"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="width:1.2em;height:1.2em;" class="astro-3f4rfcpt">
 			<path d="M12.3 12.22A4.92 4.92 0 0 0 14 8.5a5 5 0 0 0-10 0a4.92 4.92 0 0 0 1.7 3.72A8 8 0 0 0 1 19.5a1 1 0 0 0 2 0a6 6 0 0 1 12 0a1 1 0 0 0 2 0a8 8 0 0 0-4.7-7.28M9 11.5a3 3 0 1 1 3-3a3 3 0 0 1-3 3m9.74.32A5 5 0 0 0 15 3.5a1 1 0 0 0 0 2a3 3 0 0 1 3 3a3 3 0 0 1-1.5 2.59a1 1 0 0 0-.5.84a1 1 0 0 0 .45.86l.39.26l.13.07a7 7 0 0 1 4 6.38a1 1 0 0 0 2 0a9 9 0 0 0-4.23-7.68" class="astro-3f4rfcpt"></path>
 		</svg>
 		Comunidad</a>
 
-	<a href="https://opencollective.com/astrodotbuild" class="sl-flex astro-3f4rfcpt" data-sl-id="f336"><svg aria-hidden="true" class="astro-3f4rfcpt astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path d="M20.16 5A6.29 6.29 0 0 0 12 4.36a6.27 6.27 0 0 0-8.16 9.48l6.21 6.22a2.78 2.78 0 0 0 3.9 0l6.21-6.22a6.27 6.27 0 0 0 0-8.84m-1.41 7.46-6.21 6.21a.76.76 0 0 1-1.08 0l-6.21-6.24a4.29 4.29 0 0 1 0-6 4.27 4.27 0 0 1 6 0 1 1 0 0 0 1.42 0 4.27 4.27 0 0 1 6 0 4.29 4.29 0 0 1 .08 6Z"></path></svg>
+	<a href="https://opencollective.com/astrodotbuild" class="sl-flex astro-3f4rfcpt" data-sl-id="f397"><svg aria-hidden="true" class="astro-3f4rfcpt astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path d="M20.16 5A6.29 6.29 0 0 0 12 4.36a6.27 6.27 0 0 0-8.16 9.48l6.21 6.22a2.78 2.78 0 0 0 3.9 0l6.21-6.22a6.27 6.27 0 0 0 0-8.84m-1.41 7.46-6.21 6.21a.76.76 0 0 1-1.08 0l-6.21-6.24a4.29 4.29 0 0 1 0-6 4.27 4.27 0 0 1 6 0 1 1 0 0 0 1.42 0 4.27 4.27 0 0 1 6 0 4.29 4.29 0 0 1 .08 6Z"></path></svg>
 		Patrocinar</a>
 </section>
-							</div>
+								</div>
 </div>
+							
 				</main>
 			</div>
 </div>
