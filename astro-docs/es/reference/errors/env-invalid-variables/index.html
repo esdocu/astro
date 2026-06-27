@@ -108,16 +108,7 @@
 </script>
 
 <script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script>
-		<starlight-lang-select>
-			<label style="--sl-select-width: 7em" class="astro-pl7p4lbc">
-	<span class="sr-only astro-pl7p4lbc" data-sl-id="f10">Seleccionar idioma</span>
-	<svg aria-hidden="true" class="icon label-icon astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"></path></svg>
-	<select autocomplete="off" class="astro-pl7p4lbc">
-		<option value="/en/reference/errors/env-invalid-variables/" selected="" class="astro-pl7p4lbc" data-sl-id="f11">English</option><option value="/de/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f12">Deutsch</option><option value="/pt-br/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f13">Português do Brasil</option><option value="/es/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f14">Español</option><option value="/zh-cn/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f15">简体中文</option><option value="/zh-tw/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f16">正體中文</option><option value="/fr/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f17">Français</option><option value="/hi/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc">हिन्दी</option><option value="/ar/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc">العربية</option><option value="/ja/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f18">日本語</option><option value="/ko/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc">한국어</option><option value="/pl/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f19">Polski</option><option value="/ru/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc">Русский</option><option value="/it/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f20">Italiano</option>
-	</select>
-	<svg aria-hidden="true" class="icon caret astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"></path></svg>
-</label>
-		</starlight-lang-select>
+		
 
 <script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script>
 	</div>
@@ -161,13 +152,13 @@
 	<tabbed-content class="astro-ngvtsbkj">
 	<ul class="tab-list tabbed-sidebar astro-ssgxcmrq astro-ngvtsbkj" role="tablist">
 		<li class="tab-item astro-ssgxcmrq" role="presentation">
-	<a href="#__tab-tutorial" class="tab-link" role="tab" id="27jaa8jbtab0" tabindex="-1" data-sl-id="f21"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg> Tutorial</a>
+	<a href="#__tab-tutorial" class="tab-link" role="tab" id="27jaa8jbtab0" tabindex="-1" data-sl-id="f10"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg> Tutorial</a>
 </li><li class="tab-item astro-ssgxcmrq" role="presentation">
-	<a href="#__tab-guide" class="tab-link" role="tab" id="27jaa8jbtab1" tabindex="-1" data-sl-id="f22"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.17 2.06A13.1 13.1 0 0 0 19 1.87a12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2 13.1 13.1 0 0 0-2.17.19 1 1 0 0 0-.83 1v12a1 1 0 0 0 1.17 1 10.9 10.9 0 0 1 8.25 1.91l.12.07h.11a.91.91 0 0 0 .7 0h.11l.12-.07A10.899 10.899 0 0 1 20.83 16 1 1 0 0 0 22 15V3a1 1 0 0 0-.83-.94ZM11 15.35a12.87 12.87 0 0 0-6-1.48H4v-10c.333-.02.667-.02 1 0a10.86 10.86 0 0 1 6 1.8v9.68Zm9-1.44h-1a12.87 12.87 0 0 0-6 1.48V5.67a10.86 10.86 0 0 1 6-1.8c.333-.02.667-.02 1 0v10.04Zm1.17 4.15a13.098 13.098 0 0 0-2.17-.19 12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2.05c-.727.003-1.453.066-2.17.19A1 1 0 0 0 2 19.21a1 1 0 0 0 1.17.79 10.9 10.9 0 0 1 8.25 1.91 1 1 0 0 0 1.16 0A10.9 10.9 0 0 1 20.83 20a1 1 0 0 0 1.17-.79 1 1 0 0 0-.83-1.15Z"></path></svg> Guía</a>
+	<a href="#__tab-guide" class="tab-link" role="tab" id="27jaa8jbtab1" tabindex="-1" data-sl-id="f11"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.17 2.06A13.1 13.1 0 0 0 19 1.87a12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2 13.1 13.1 0 0 0-2.17.19 1 1 0 0 0-.83 1v12a1 1 0 0 0 1.17 1 10.9 10.9 0 0 1 8.25 1.91l.12.07h.11a.91.91 0 0 0 .7 0h.11l.12-.07A10.899 10.899 0 0 1 20.83 16 1 1 0 0 0 22 15V3a1 1 0 0 0-.83-.94ZM11 15.35a12.87 12.87 0 0 0-6-1.48H4v-10c.333-.02.667-.02 1 0a10.86 10.86 0 0 1 6 1.8v9.68Zm9-1.44h-1a12.87 12.87 0 0 0-6 1.48V5.67a10.86 10.86 0 0 1 6-1.8c.333-.02.667-.02 1 0v10.04Zm1.17 4.15a13.098 13.098 0 0 0-2.17-.19 12.94 12.94 0 0 0-7 2.05 12.94 12.94 0 0 0-7-2.05c-.727.003-1.453.066-2.17.19A1 1 0 0 0 2 19.21a1 1 0 0 0 1.17.79 10.9 10.9 0 0 1 8.25 1.91 1 1 0 0 0 1.16 0A10.9 10.9 0 0 1 20.83 20a1 1 0 0 0 1.17-.79 1 1 0 0 0-.83-1.15Z"></path></svg> Guía</a>
 </li><li class="tab-item astro-ssgxcmrq" role="presentation">
-	<a href="#__tab-reference" class="tab-link" data-initial="true" aria-selected="true" role="tab" id="27jaa8jbtab2" data-sl-id="f23"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"></path></svg> Referencia</a>
+	<a href="#__tab-reference" class="tab-link" data-initial="true" aria-selected="true" role="tab" id="27jaa8jbtab2" data-sl-id="f12"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"></path></svg> Referencia</a>
 </li><li class="tab-item astro-ssgxcmrq" role="presentation">
-	<a href="#__tab-ecosystem" class="tab-link" role="tab" id="27jaa8jbtab3" tabindex="-1" data-sl-id="f24"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 22H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h1a4 4 0 0 1 7.3-2.18c.448.64.692 1.4.7 2.18h3a1 1 0 0 1 1 1v3a4 4 0 0 1 2.18 7.3A3.86 3.86 0 0 1 18 18v3a1 1 0 0 1-1 1ZM5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11v-3.18a1 1 0 0 1 1.33-.95 1.77 1.77 0 0 0 1.74-.23 2 2 0 0 0 .93-1.37 2 2 0 0 0-.48-1.59 1.89 1.89 0 0 0-2.17-.55 1 1 0 0 1-1.33-.95V8h-3.2a1 1 0 0 1-1-1.33 1.77 1.77 0 0 0-.23-1.74 1.939 1.939 0 0 0-3-.43A2 2 0 0 0 8 6c.002.23.046.456.13.67A1 1 0 0 1 7.18 8H5Z"></path></svg> Ecosistema</a>
+	<a href="#__tab-ecosystem" class="tab-link" role="tab" id="27jaa8jbtab3" tabindex="-1" data-sl-id="f13"><svg aria-hidden="true" class="icon astro-ssgxcmrq astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 22H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h1a4 4 0 0 1 7.3-2.18c.448.64.692 1.4.7 2.18h3a1 1 0 0 1 1 1v3a4 4 0 0 1 2.18 7.3A3.86 3.86 0 0 1 18 18v3a1 1 0 0 1-1 1ZM5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11v-3.18a1 1 0 0 1 1.33-.95 1.77 1.77 0 0 0 1.74-.23 2 2 0 0 0 .93-1.37 2 2 0 0 0-.48-1.59 1.89 1.89 0 0 0-2.17-.55 1 1 0 0 1-1.33-.95V8h-3.2a1 1 0 0 1-1-1.33 1.77 1.77 0 0 0-.23-1.74 1.939 1.939 0 0 0-3-.43A2 2 0 0 0 8 6c.002.23.046.456.13.67A1 1 0 0 1 7.18 8H5Z"></path></svg> Ecosistema</a>
 </li>
 	</ul>
 
@@ -178,19 +169,19 @@
 	
 					<ul class="top-level astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/tutorial/0-introduction/" class="large astro-3xlzsaht" data-sl-id="f25"><span class="astro-3xlzsaht">Introducción</span></a>
+				<a href="/tutorial/0-introduction/" class="large astro-3xlzsaht" data-sl-id="f14"><span class="astro-3xlzsaht">Introducción</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/tutorial/1-setup/" class="large astro-3xlzsaht" data-sl-id="f26"><span class="astro-3xlzsaht">Unidad 1 - Configuración</span></a>
+				<a href="/tutorial/1-setup/" class="large astro-3xlzsaht" data-sl-id="f15"><span class="astro-3xlzsaht">Unidad 1 - Configuración</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/tutorial/2-pages/" class="large astro-3xlzsaht" data-sl-id="f27"><span class="astro-3xlzsaht">Unidad 2 - Páginas</span></a>
+				<a href="/tutorial/2-pages/" class="large astro-3xlzsaht" data-sl-id="f16"><span class="astro-3xlzsaht">Unidad 2 - Páginas</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/tutorial/3-components/" class="large astro-3xlzsaht" data-sl-id="f28"><span class="astro-3xlzsaht">Unidad 3 - Componentes</span></a>
+				<a href="/tutorial/3-components/" class="large astro-3xlzsaht" data-sl-id="f17"><span class="astro-3xlzsaht">Unidad 3 - Componentes</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/tutorial/4-layouts/" class="large astro-3xlzsaht" data-sl-id="f29"><span class="astro-3xlzsaht">Unidad 4 - Layouts</span></a>
+				<a href="/tutorial/4-layouts/" class="large astro-3xlzsaht" data-sl-id="f18"><span class="astro-3xlzsaht">Unidad 4 - Layouts</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/tutorial/5-astro-api/" class="large astro-3xlzsaht" data-sl-id="f30"><span class="astro-3xlzsaht">Unidad 5 - API de Astro</span></a>
+				<a href="/tutorial/5-astro-api/" class="large astro-3xlzsaht" data-sl-id="f19"><span class="astro-3xlzsaht">Unidad 5 - API de Astro</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/tutorial/6-islands/" class="large astro-3xlzsaht" data-sl-id="f31"><span class="astro-3xlzsaht">Unidad 6 - Islas de Astro</span></a>
+				<a href="/tutorial/6-islands/" class="large astro-3xlzsaht" data-sl-id="f20"><span class="astro-3xlzsaht">Unidad 6 - Islas de Astro</span></a>
 			</li>
 </ul>
 				
@@ -199,7 +190,7 @@
 					<ul class="top-level astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f32"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f21"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">¡Te damos la bienvenida, mundo!</span>
 								
 							</span>
@@ -207,17 +198,17 @@
 						<sl-sidebar-restore data-index="0"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/concepts/why-astro/" class="astro-3xlzsaht" data-sl-id="f33"><span class="astro-3xlzsaht">¿Por qué Astro?</span></a>
+				<a href="/concepts/why-astro/" class="astro-3xlzsaht" data-sl-id="f22"><span class="astro-3xlzsaht">¿Por qué Astro?</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/concepts/islands/" class="astro-3xlzsaht" data-sl-id="f34"><span class="astro-3xlzsaht">Arquitectura de islas</span></a>
+				<a href="/concepts/islands/" class="astro-3xlzsaht" data-sl-id="f23"><span class="astro-3xlzsaht">Arquitectura de islas</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/astro-courses/" class="astro-3xlzsaht" data-sl-id="f35"><span class="astro-3xlzsaht">Cursos</span></a>
+				<a href="/astro-courses/" class="astro-3xlzsaht" data-sl-id="f24"><span class="astro-3xlzsaht">Cursos</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f36"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f25"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Iniciar un nuevo proyecto</span>
 								
 							</span>
@@ -225,17 +216,17 @@
 						<sl-sidebar-restore data-index="1"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/install-and-setup/" class="astro-3xlzsaht" data-sl-id="f37"><span class="astro-3xlzsaht">Instalación</span></a>
+				<a href="/install-and-setup/" class="astro-3xlzsaht" data-sl-id="f26"><span class="astro-3xlzsaht">Instalación</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/basics/project-structure/" class="astro-3xlzsaht" data-sl-id="f38"><span class="astro-3xlzsaht">Estructura del proyecto</span></a>
+				<a href="/basics/project-structure/" class="astro-3xlzsaht" data-sl-id="f27"><span class="astro-3xlzsaht">Estructura del proyecto</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/develop-and-build/" class="astro-3xlzsaht" data-sl-id="f39"><span class="astro-3xlzsaht">Desarrollo y compilación</span></a>
+				<a href="/develop-and-build/" class="astro-3xlzsaht" data-sl-id="f28"><span class="astro-3xlzsaht">Desarrollo y compilación</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f40"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f29"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Configuración</span>
 								
 							</span>
@@ -243,25 +234,25 @@
 						<sl-sidebar-restore data-index="2"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/configuring-astro/" class="astro-3xlzsaht" data-sl-id="f41"><span class="astro-3xlzsaht">Vista general de la configuración</span></a>
+				<a href="/guides/configuring-astro/" class="astro-3xlzsaht" data-sl-id="f30"><span class="astro-3xlzsaht">Vista general de la configuración</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/editor-setup/" class="astro-3xlzsaht" data-sl-id="f42"><span class="astro-3xlzsaht">Configuración del editor</span></a>
+				<a href="/editor-setup/" class="astro-3xlzsaht" data-sl-id="f31"><span class="astro-3xlzsaht">Configuración del editor</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/typescript/" class="astro-3xlzsaht" data-sl-id="f43"><span class="astro-3xlzsaht">TypeScript</span></a>
+				<a href="/guides/typescript/" class="astro-3xlzsaht" data-sl-id="f32"><span class="astro-3xlzsaht">TypeScript</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/environment-variables/" class="astro-3xlzsaht" data-sl-id="f44"><span class="astro-3xlzsaht">Variables de entorno</span></a>
+				<a href="/guides/environment-variables/" class="astro-3xlzsaht" data-sl-id="f33"><span class="astro-3xlzsaht">Variables de entorno</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations/" class="astro-3xlzsaht" data-sl-id="f45"><span class="astro-3xlzsaht">Trabajar con integraciones</span></a>
+				<a href="/guides/integrations/" class="astro-3xlzsaht" data-sl-id="f34"><span class="astro-3xlzsaht">Trabajar con integraciones</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/build-with-ai/" class="astro-3xlzsaht" data-sl-id="f46"><span class="astro-3xlzsaht">Construir con IA</span></a>
+				<a href="/guides/build-with-ai/" class="astro-3xlzsaht" data-sl-id="f35"><span class="astro-3xlzsaht">Construir con IA</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/dev-toolbar/" class="astro-3xlzsaht" data-sl-id="f47"><span class="astro-3xlzsaht">Barra de herramientas de desarrollo</span></a>
+				<a href="/guides/dev-toolbar/" class="astro-3xlzsaht" data-sl-id="f36"><span class="astro-3xlzsaht">Barra de herramientas de desarrollo</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f48"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f37"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Enrutamiento y navegación</span>
 								
 							</span>
@@ -269,25 +260,25 @@
 						<sl-sidebar-restore data-index="3"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/basics/astro-pages/" class="astro-3xlzsaht" data-sl-id="f49"><span class="astro-3xlzsaht">Páginas</span></a>
+				<a href="/basics/astro-pages/" class="astro-3xlzsaht" data-sl-id="f38"><span class="astro-3xlzsaht">Páginas</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/routing/" class="astro-3xlzsaht" data-sl-id="f50"><span class="astro-3xlzsaht">Enrutamiento</span></a>
+				<a href="/guides/routing/" class="astro-3xlzsaht" data-sl-id="f39"><span class="astro-3xlzsaht">Enrutamiento</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/endpoints/" class="astro-3xlzsaht" data-sl-id="f51"><span class="astro-3xlzsaht">Endpoints</span></a>
+				<a href="/guides/endpoints/" class="astro-3xlzsaht" data-sl-id="f40"><span class="astro-3xlzsaht">Endpoints</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/middleware/" class="astro-3xlzsaht" data-sl-id="f52"><span class="astro-3xlzsaht">Middleware</span></a>
+				<a href="/guides/middleware/" class="astro-3xlzsaht" data-sl-id="f41"><span class="astro-3xlzsaht">Middleware</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/internationalization/" class="astro-3xlzsaht" data-sl-id="f53"><span class="astro-3xlzsaht">Internacionalización (i18n)</span></a>
+				<a href="/guides/internationalization/" class="astro-3xlzsaht" data-sl-id="f42"><span class="astro-3xlzsaht">Internacionalización (i18n)</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/prefetch/" class="astro-3xlzsaht" data-sl-id="f54"><span class="astro-3xlzsaht">Precarga</span></a>
+				<a href="/guides/prefetch/" class="astro-3xlzsaht" data-sl-id="f43"><span class="astro-3xlzsaht">Precarga</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/view-transitions/" class="astro-3xlzsaht" data-sl-id="f55"><span class="astro-3xlzsaht">Transiciones de vista</span></a>
+				<a href="/guides/view-transitions/" class="astro-3xlzsaht" data-sl-id="f44"><span class="astro-3xlzsaht">Transiciones de vista</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f56"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f45"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Construye tu UI</span>
 								
 							</span>
@@ -295,25 +286,25 @@
 						<sl-sidebar-restore data-index="4"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/basics/astro-components/" class="astro-3xlzsaht" data-sl-id="f57"><span class="astro-3xlzsaht">Componentes</span></a>
+				<a href="/basics/astro-components/" class="astro-3xlzsaht" data-sl-id="f46"><span class="astro-3xlzsaht">Componentes</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/basics/layouts/" class="astro-3xlzsaht" data-sl-id="f58"><span class="astro-3xlzsaht">Plantillas</span></a>
+				<a href="/basics/layouts/" class="astro-3xlzsaht" data-sl-id="f47"><span class="astro-3xlzsaht">Plantillas</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/styling/" class="astro-3xlzsaht" data-sl-id="f59"><span class="astro-3xlzsaht">Estilos y CSS</span></a>
+				<a href="/guides/styling/" class="astro-3xlzsaht" data-sl-id="f48"><span class="astro-3xlzsaht">Estilos y CSS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/fonts/" class="astro-3xlzsaht" data-sl-id="f60"><span class="astro-3xlzsaht">Fuentes</span></a>
+				<a href="/guides/fonts/" class="astro-3xlzsaht" data-sl-id="f49"><span class="astro-3xlzsaht">Fuentes</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/syntax-highlighting/" class="astro-3xlzsaht" data-sl-id="f61"><span class="astro-3xlzsaht">Resaltado de sintaxis</span></a>
+				<a href="/guides/syntax-highlighting/" class="astro-3xlzsaht" data-sl-id="f50"><span class="astro-3xlzsaht">Resaltado de sintaxis</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/client-side-scripts/" class="astro-3xlzsaht" data-sl-id="f62"><span class="astro-3xlzsaht">Scripts y manejo de eventos</span></a>
+				<a href="/guides/client-side-scripts/" class="astro-3xlzsaht" data-sl-id="f51"><span class="astro-3xlzsaht">Scripts y manejo de eventos</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/framework-components/" class="astro-3xlzsaht" data-sl-id="f63"><span class="astro-3xlzsaht">Frameworks de front-end</span></a>
+				<a href="/guides/framework-components/" class="astro-3xlzsaht" data-sl-id="f52"><span class="astro-3xlzsaht">Frameworks de front-end</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f64"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f53"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Añadir contenido a tu sitio</span>
 								
 							</span>
@@ -321,19 +312,19 @@
 						<sl-sidebar-restore data-index="5"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/markdown-content/" class="astro-3xlzsaht" data-sl-id="f65"><span class="astro-3xlzsaht">Markdown</span></a>
+				<a href="/guides/markdown-content/" class="astro-3xlzsaht" data-sl-id="f54"><span class="astro-3xlzsaht">Markdown</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/content-collections/" class="astro-3xlzsaht" data-sl-id="f66"><span class="astro-3xlzsaht">Colecciones de contenido</span></a>
+				<a href="/guides/content-collections/" class="astro-3xlzsaht" data-sl-id="f55"><span class="astro-3xlzsaht">Colecciones de contenido</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/images/" class="astro-3xlzsaht" data-sl-id="f67"><span class="astro-3xlzsaht">Imágenes</span></a>
+				<a href="/guides/images/" class="astro-3xlzsaht" data-sl-id="f56"><span class="astro-3xlzsaht">Imágenes</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/data-fetching/" class="astro-3xlzsaht" data-sl-id="f68"><span class="astro-3xlzsaht">Obtención de datos</span></a>
+				<a href="/guides/data-fetching/" class="astro-3xlzsaht" data-sl-id="f57"><span class="astro-3xlzsaht">Obtención de datos</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f69"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f58"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Renderizado en el servidor</span>
 								
 							</span>
@@ -341,21 +332,21 @@
 						<sl-sidebar-restore data-index="6"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/on-demand-rendering/" class="astro-3xlzsaht" data-sl-id="f70"><span class="astro-3xlzsaht">Renderizado bajo demanda</span></a>
+				<a href="/guides/on-demand-rendering/" class="astro-3xlzsaht" data-sl-id="f59"><span class="astro-3xlzsaht">Renderizado bajo demanda</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/server-islands/" class="astro-3xlzsaht" data-sl-id="f71"><span class="astro-3xlzsaht">Islas de servidor</span></a>
+				<a href="/guides/server-islands/" class="astro-3xlzsaht" data-sl-id="f60"><span class="astro-3xlzsaht">Islas de servidor</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/actions/" class="astro-3xlzsaht" data-sl-id="f72"><span class="astro-3xlzsaht">Acciones</span></a>
+				<a href="/guides/actions/" class="astro-3xlzsaht" data-sl-id="f61"><span class="astro-3xlzsaht">Acciones</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/sessions/" class="astro-3xlzsaht" data-sl-id="f73"><span class="astro-3xlzsaht">Sesiones</span></a>
+				<a href="/guides/sessions/" class="astro-3xlzsaht" data-sl-id="f62"><span class="astro-3xlzsaht">Sesiones</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/caching/" class="astro-3xlzsaht" data-sl-id="f74"><span class="astro-3xlzsaht">Caché de rutas</span></a>
+				<a href="/guides/caching/" class="astro-3xlzsaht" data-sl-id="f63"><span class="astro-3xlzsaht">Caché de rutas</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f75"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f64"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Actualizar</span>
 								
 							</span>
@@ -363,10 +354,10 @@
 						<sl-sidebar-restore data-index="7"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/upgrade-astro/" class="astro-3xlzsaht" data-sl-id="f76"><span class="astro-3xlzsaht">Actualizar Astro</span></a>
+				<a href="/upgrade-astro/" class="astro-3xlzsaht" data-sl-id="f65"><span class="astro-3xlzsaht">Actualizar Astro</span></a>
 			</li><li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f77"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f66"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Guías de versiones mayores</span>
 								
 							</span>
@@ -374,19 +365,19 @@
 						<sl-sidebar-restore data-index="8"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/upgrade-to/v7/" class="astro-3xlzsaht" data-sl-id="f78"><span class="astro-3xlzsaht">v7.0</span></a>
+				<a href="/guides/upgrade-to/v7/" class="astro-3xlzsaht" data-sl-id="f67"><span class="astro-3xlzsaht">v7.0</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/upgrade-to/v6/" class="astro-3xlzsaht" data-sl-id="f79"><span class="astro-3xlzsaht">v6.0</span></a>
+				<a href="/guides/upgrade-to/v6/" class="astro-3xlzsaht" data-sl-id="f68"><span class="astro-3xlzsaht">v6.0</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/upgrade-to/v5/" class="astro-3xlzsaht" data-sl-id="f80"><span class="astro-3xlzsaht">v5.0</span></a>
+				<a href="/guides/upgrade-to/v5/" class="astro-3xlzsaht" data-sl-id="f69"><span class="astro-3xlzsaht">v5.0</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/upgrade-to/v4/" class="astro-3xlzsaht" data-sl-id="f81"><span class="astro-3xlzsaht">v4.0</span></a>
+				<a href="/guides/upgrade-to/v4/" class="astro-3xlzsaht" data-sl-id="f70"><span class="astro-3xlzsaht">v4.0</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/upgrade-to/v3/" class="astro-3xlzsaht" data-sl-id="f82"><span class="astro-3xlzsaht">v3.0</span></a>
+				<a href="/guides/upgrade-to/v3/" class="astro-3xlzsaht" data-sl-id="f71"><span class="astro-3xlzsaht">v3.0</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/upgrade-to/v2/" class="astro-3xlzsaht" data-sl-id="f83"><span class="astro-3xlzsaht">v2.0</span></a>
+				<a href="/guides/upgrade-to/v2/" class="astro-3xlzsaht" data-sl-id="f72"><span class="astro-3xlzsaht">v2.0</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/upgrade-to/v1/" class="astro-3xlzsaht" data-sl-id="f84"><span class="astro-3xlzsaht">v1.0</span></a>
+				<a href="/guides/upgrade-to/v1/" class="astro-3xlzsaht" data-sl-id="f73"><span class="astro-3xlzsaht">v1.0</span></a>
 			</li>
 </ul>
 					</details>
@@ -394,10 +385,10 @@
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/troubleshooting/" class="large astro-3xlzsaht" data-sl-id="f85"><span class="astro-3xlzsaht">Resolución de problemas</span></a>
+				<a href="/guides/troubleshooting/" class="large astro-3xlzsaht" data-sl-id="f74"><span class="astro-3xlzsaht">Resolución de problemas</span></a>
 			</li><li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f86"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f75"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Recetas</span>
 								
 							</span>
@@ -405,55 +396,55 @@
 						<sl-sidebar-restore data-index="9"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/recipes/" class="astro-3xlzsaht" data-sl-id="f87"><span class="astro-3xlzsaht">Vista general de las recetas</span></a>
+				<a href="/recipes/" class="astro-3xlzsaht" data-sl-id="f76"><span class="astro-3xlzsaht">Vista general de las recetas</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/add-yaml-support/" class="astro-3xlzsaht" data-sl-id="f88"><span class="astro-3xlzsaht">Instalar un plugin de Vite o Rollup</span></a>
+				<a href="/recipes/add-yaml-support/" class="astro-3xlzsaht" data-sl-id="f77"><span class="astro-3xlzsaht">Instalar un plugin de Vite o Rollup</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/analyze-bundle-size/" class="astro-3xlzsaht" data-sl-id="f89"><span class="astro-3xlzsaht">Analizar el tamaño del bundle</span></a>
+				<a href="/recipes/analyze-bundle-size/" class="astro-3xlzsaht" data-sl-id="f78"><span class="astro-3xlzsaht">Analizar el tamaño del bundle</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/build-custom-img-component/" class="astro-3xlzsaht" data-sl-id="f90"><span class="astro-3xlzsaht">Construir un componente de imagen personalizado</span></a>
+				<a href="/recipes/build-custom-img-component/" class="astro-3xlzsaht" data-sl-id="f79"><span class="astro-3xlzsaht">Construir un componente de imagen personalizado</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/build-forms/" class="astro-3xlzsaht" data-sl-id="f91"><span class="astro-3xlzsaht">Construir formularios HTML en páginas de Astro</span></a>
+				<a href="/recipes/build-forms/" class="astro-3xlzsaht" data-sl-id="f80"><span class="astro-3xlzsaht">Construir formularios HTML en páginas de Astro</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/build-forms-api/" class="astro-3xlzsaht" data-sl-id="f92"><span class="astro-3xlzsaht">Construir formularios con rutas de API</span></a>
+				<a href="/recipes/build-forms-api/" class="astro-3xlzsaht" data-sl-id="f81"><span class="astro-3xlzsaht">Construir formularios con rutas de API</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/bun/" class="astro-3xlzsaht" data-sl-id="f93"><span class="astro-3xlzsaht">Usar Bun con Astro</span></a>
+				<a href="/recipes/bun/" class="astro-3xlzsaht" data-sl-id="f82"><span class="astro-3xlzsaht">Usar Bun con Astro</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/call-endpoints/" class="astro-3xlzsaht" data-sl-id="f94"><span class="astro-3xlzsaht">Llamar a endpoints desde el servidor</span></a>
+				<a href="/recipes/call-endpoints/" class="astro-3xlzsaht" data-sl-id="f83"><span class="astro-3xlzsaht">Llamar a endpoints desde el servidor</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/captcha/" class="astro-3xlzsaht" data-sl-id="f95"><span class="astro-3xlzsaht">Verificar un Captcha</span></a>
+				<a href="/recipes/captcha/" class="astro-3xlzsaht" data-sl-id="f84"><span class="astro-3xlzsaht">Verificar un Captcha</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/customizing-output-filenames/" class="astro-3xlzsaht" data-sl-id="f96"><span class="astro-3xlzsaht">Personalizar nombres de archivos en la salida de compilación</span></a>
+				<a href="/recipes/customizing-output-filenames/" class="astro-3xlzsaht" data-sl-id="f85"><span class="astro-3xlzsaht">Personalizar nombres de archivos en la salida de compilación</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/docker/" class="astro-3xlzsaht" data-sl-id="f97"><span class="astro-3xlzsaht">Construir tu sitio de Astro con Docker</span></a>
+				<a href="/recipes/docker/" class="astro-3xlzsaht" data-sl-id="f86"><span class="astro-3xlzsaht">Construir tu sitio de Astro con Docker</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/dynamically-importing-images/" class="astro-3xlzsaht" data-sl-id="f98"><span class="astro-3xlzsaht">Importar imágenes dinámicamente</span></a>
+				<a href="/recipes/dynamically-importing-images/" class="astro-3xlzsaht" data-sl-id="f87"><span class="astro-3xlzsaht">Importar imágenes dinámicamente</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/external-links/" class="astro-3xlzsaht" data-sl-id="f99"><span class="astro-3xlzsaht">Añadir iconos a enlaces externos</span></a>
+				<a href="/recipes/external-links/" class="astro-3xlzsaht" data-sl-id="f88"><span class="astro-3xlzsaht">Añadir iconos a enlaces externos</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/i18n/" class="astro-3xlzsaht" data-sl-id="f100"><span class="astro-3xlzsaht">Añadir funciones de i18n</span></a>
+				<a href="/recipes/i18n/" class="astro-3xlzsaht" data-sl-id="f89"><span class="astro-3xlzsaht">Añadir funciones de i18n</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/making-toolbar-apps/" class="astro-3xlzsaht" data-sl-id="f101"><span class="astro-3xlzsaht">Crear una aplicación para la barra de herramientas de desarrollo</span></a>
+				<a href="/recipes/making-toolbar-apps/" class="astro-3xlzsaht" data-sl-id="f90"><span class="astro-3xlzsaht">Crear una aplicación para la barra de herramientas de desarrollo</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/modified-time/" class="astro-3xlzsaht" data-sl-id="f102"><span class="astro-3xlzsaht">Añadir la fecha de última modificación</span></a>
+				<a href="/recipes/modified-time/" class="astro-3xlzsaht" data-sl-id="f91"><span class="astro-3xlzsaht">Añadir la fecha de última modificación</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/reading-time/" class="astro-3xlzsaht" data-sl-id="f103"><span class="astro-3xlzsaht">Añadir tiempo de lectura</span></a>
+				<a href="/recipes/reading-time/" class="astro-3xlzsaht" data-sl-id="f92"><span class="astro-3xlzsaht">Añadir tiempo de lectura</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/rss/" class="astro-3xlzsaht" data-sl-id="f104"><span class="astro-3xlzsaht">Añadir un feed de RSS</span></a>
+				<a href="/recipes/rss/" class="astro-3xlzsaht" data-sl-id="f93"><span class="astro-3xlzsaht">Añadir un feed de RSS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/sharing-state/" class="astro-3xlzsaht" data-sl-id="f105"><span class="astro-3xlzsaht">Compartir estado entre componentes de Astro</span></a>
+				<a href="/recipes/sharing-state/" class="astro-3xlzsaht" data-sl-id="f94"><span class="astro-3xlzsaht">Compartir estado entre componentes de Astro</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/sharing-state-islands/" class="astro-3xlzsaht" data-sl-id="f106"><span class="astro-3xlzsaht">Compartir estado entre islas</span></a>
+				<a href="/recipes/sharing-state-islands/" class="astro-3xlzsaht" data-sl-id="f95"><span class="astro-3xlzsaht">Compartir estado entre islas</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/streaming-improve-page-performance/" class="astro-3xlzsaht" data-sl-id="f107"><span class="astro-3xlzsaht">Usar streaming para mejorar el rendimiento de la página</span></a>
+				<a href="/recipes/streaming-improve-page-performance/" class="astro-3xlzsaht" data-sl-id="f96"><span class="astro-3xlzsaht">Usar streaming para mejorar el rendimiento de la página</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/recipes/tailwind-rendered-markdown/" class="astro-3xlzsaht" data-sl-id="f108"><span class="astro-3xlzsaht">Dar estilo al Markdown renderizado con Tailwind Typography</span></a>
+				<a href="/recipes/tailwind-rendered-markdown/" class="astro-3xlzsaht" data-sl-id="f97"><span class="astro-3xlzsaht">Dar estilo al Markdown renderizado con Tailwind Typography</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f109"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f98"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Migrar a Astro</span>
 								
 							</span>
@@ -461,40 +452,40 @@
 						<sl-sidebar-restore data-index="10"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/" class="astro-3xlzsaht" data-sl-id="f110"><span class="astro-3xlzsaht">Vista general de la migración de sitios</span></a>
+				<a href="/guides/migrate-to-astro/" class="astro-3xlzsaht" data-sl-id="f99"><span class="astro-3xlzsaht">Vista general de la migración de sitios</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-create-react-app/" class="astro-3xlzsaht" data-sl-id="f111"><span class="astro-3xlzsaht">Create React App</span></a>
+				<a href="/guides/migrate-to-astro/from-create-react-app/" class="astro-3xlzsaht" data-sl-id="f100"><span class="astro-3xlzsaht">Create React App</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-docusaurus/" class="astro-3xlzsaht" data-sl-id="f112"><span class="astro-3xlzsaht">Docusaurus</span></a>
+				<a href="/guides/migrate-to-astro/from-docusaurus/" class="astro-3xlzsaht" data-sl-id="f101"><span class="astro-3xlzsaht">Docusaurus</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-eleventy/" class="astro-3xlzsaht" data-sl-id="f113"><span class="astro-3xlzsaht">Eleventy</span></a>
+				<a href="/guides/migrate-to-astro/from-eleventy/" class="astro-3xlzsaht" data-sl-id="f102"><span class="astro-3xlzsaht">Eleventy</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-gatsby/" class="astro-3xlzsaht" data-sl-id="f114"><span class="astro-3xlzsaht">Gatsby</span></a>
+				<a href="/guides/migrate-to-astro/from-gatsby/" class="astro-3xlzsaht" data-sl-id="f103"><span class="astro-3xlzsaht">Gatsby</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-gitbook/" class="astro-3xlzsaht" data-sl-id="f115"><span class="astro-3xlzsaht">GitBook</span></a>
+				<a href="/guides/migrate-to-astro/from-gitbook/" class="astro-3xlzsaht" data-sl-id="f104"><span class="astro-3xlzsaht">GitBook</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-gridsome/" class="astro-3xlzsaht" data-sl-id="f116"><span class="astro-3xlzsaht">Gridsome</span></a>
+				<a href="/guides/migrate-to-astro/from-gridsome/" class="astro-3xlzsaht" data-sl-id="f105"><span class="astro-3xlzsaht">Gridsome</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-hugo/" class="astro-3xlzsaht" data-sl-id="f117"><span class="astro-3xlzsaht">Hugo</span></a>
+				<a href="/guides/migrate-to-astro/from-hugo/" class="astro-3xlzsaht" data-sl-id="f106"><span class="astro-3xlzsaht">Hugo</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-jekyll/" class="astro-3xlzsaht" data-sl-id="f118"><span class="astro-3xlzsaht">Jekyll</span></a>
+				<a href="/guides/migrate-to-astro/from-jekyll/" class="astro-3xlzsaht" data-sl-id="f107"><span class="astro-3xlzsaht">Jekyll</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-nextjs/" class="astro-3xlzsaht" data-sl-id="f119"><span class="astro-3xlzsaht">Next.js</span></a>
+				<a href="/guides/migrate-to-astro/from-nextjs/" class="astro-3xlzsaht" data-sl-id="f108"><span class="astro-3xlzsaht">Next.js</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-nuxtjs/" class="astro-3xlzsaht" data-sl-id="f120"><span class="astro-3xlzsaht">NuxtJS</span></a>
+				<a href="/guides/migrate-to-astro/from-nuxtjs/" class="astro-3xlzsaht" data-sl-id="f109"><span class="astro-3xlzsaht">NuxtJS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-pelican/" class="astro-3xlzsaht" data-sl-id="f121"><span class="astro-3xlzsaht">Pelican</span></a>
+				<a href="/guides/migrate-to-astro/from-pelican/" class="astro-3xlzsaht" data-sl-id="f110"><span class="astro-3xlzsaht">Pelican</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-sveltekit/" class="astro-3xlzsaht" data-sl-id="f122"><span class="astro-3xlzsaht">SvelteKit</span></a>
+				<a href="/guides/migrate-to-astro/from-sveltekit/" class="astro-3xlzsaht" data-sl-id="f111"><span class="astro-3xlzsaht">SvelteKit</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-vuepress/" class="astro-3xlzsaht" data-sl-id="f123"><span class="astro-3xlzsaht">VuePress</span></a>
+				<a href="/guides/migrate-to-astro/from-vuepress/" class="astro-3xlzsaht" data-sl-id="f112"><span class="astro-3xlzsaht">VuePress</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/migrate-to-astro/from-wordpress/" class="astro-3xlzsaht" data-sl-id="f124"><span class="astro-3xlzsaht">WordPress</span></a>
+				<a href="/guides/migrate-to-astro/from-wordpress/" class="astro-3xlzsaht" data-sl-id="f113"><span class="astro-3xlzsaht">WordPress</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
-				<a href="/contribute/" class="large astro-3xlzsaht" data-sl-id="f125"><span class="astro-3xlzsaht">Contribuir a Astro</span></a>
+				<a href="/contribute/" class="large astro-3xlzsaht" data-sl-id="f114"><span class="astro-3xlzsaht">Contribuir a Astro</span></a>
 			</li>
 </ul>
 				
@@ -503,7 +494,7 @@
 					<ul class="top-level astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f126"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f115"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Sintaxis de plantillas de Astro</span>
 								
 							</span>
@@ -511,23 +502,23 @@
 						<sl-sidebar-restore data-index="11"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/reference/astro-syntax/" class="astro-3xlzsaht" data-sl-id="f127"><span class="astro-3xlzsaht">Referencia de expresiones de plantilla</span></a>
+				<a href="/reference/astro-syntax/" class="astro-3xlzsaht" data-sl-id="f116"><span class="astro-3xlzsaht">Referencia de expresiones de plantilla</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/directives-reference/" class="astro-3xlzsaht" data-sl-id="f128"><span class="astro-3xlzsaht">Referencia de directivas de plantilla</span></a>
+				<a href="/reference/directives-reference/" class="astro-3xlzsaht" data-sl-id="f117"><span class="astro-3xlzsaht">Referencia de directivas de plantilla</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/configuration-reference/" class="large astro-3xlzsaht" data-sl-id="f129"><span class="astro-3xlzsaht">Referencia de configuración</span></a>
+				<a href="/reference/configuration-reference/" class="large astro-3xlzsaht" data-sl-id="f118"><span class="astro-3xlzsaht">Referencia de configuración</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/cli-reference/" class="large astro-3xlzsaht" data-sl-id="f130"><span class="astro-3xlzsaht">Comandos de la CLI</span></a>
+				<a href="/reference/cli-reference/" class="large astro-3xlzsaht" data-sl-id="f119"><span class="astro-3xlzsaht">Comandos de la CLI</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/imports/" class="large astro-3xlzsaht" data-sl-id="f131"><span class="astro-3xlzsaht">Referencia de importaciones</span></a>
+				<a href="/guides/imports/" class="large astro-3xlzsaht" data-sl-id="f120"><span class="astro-3xlzsaht">Referencia de importaciones</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/routing-reference/" class="large astro-3xlzsaht" data-sl-id="f132"><span class="astro-3xlzsaht">Referencia de enrutamiento</span></a>
+				<a href="/reference/routing-reference/" class="large astro-3xlzsaht" data-sl-id="f121"><span class="astro-3xlzsaht">Referencia de enrutamiento</span></a>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f133"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f122"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">API de runtime</span>
 								
 							</span>
@@ -535,39 +526,39 @@
 						<sl-sidebar-restore data-index="12"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/reference/api-reference/" class="astro-3xlzsaht" data-sl-id="f134"><span class="astro-3xlzsaht">Contexto de renderizado</span></a>
+				<a href="/reference/api-reference/" class="astro-3xlzsaht" data-sl-id="f123"><span class="astro-3xlzsaht">Contexto de renderizado</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-actions/" class="astro-3xlzsaht" data-sl-id="f135"><span class="astro-3xlzsaht">astro:actions</span></a>
+				<a href="/reference/modules/astro-actions/" class="astro-3xlzsaht" data-sl-id="f124"><span class="astro-3xlzsaht">astro:actions</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-app/" class="astro-3xlzsaht" data-sl-id="f136"><span class="astro-3xlzsaht">astro/app</span></a>
+				<a href="/reference/modules/astro-app/" class="astro-3xlzsaht" data-sl-id="f125"><span class="astro-3xlzsaht">astro/app</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-assets/" class="astro-3xlzsaht" data-sl-id="f137"><span class="astro-3xlzsaht">astro:assets</span></a>
+				<a href="/reference/modules/astro-assets/" class="astro-3xlzsaht" data-sl-id="f126"><span class="astro-3xlzsaht">astro:assets</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-config/" class="astro-3xlzsaht" data-sl-id="f138"><span class="astro-3xlzsaht">astro:config</span></a>
+				<a href="/reference/modules/astro-config/" class="astro-3xlzsaht" data-sl-id="f127"><span class="astro-3xlzsaht">astro:config</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-content/" class="astro-3xlzsaht" data-sl-id="f139"><span class="astro-3xlzsaht">astro:content</span></a>
+				<a href="/reference/modules/astro-content/" class="astro-3xlzsaht" data-sl-id="f128"><span class="astro-3xlzsaht">astro:content</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-env/" class="astro-3xlzsaht" data-sl-id="f140"><span class="astro-3xlzsaht">astro:env</span></a>
+				<a href="/reference/modules/astro-env/" class="astro-3xlzsaht" data-sl-id="f129"><span class="astro-3xlzsaht">astro:env</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-fetch/" class="astro-3xlzsaht" data-sl-id="f141"><span class="astro-3xlzsaht">astro/fetch</span></a>
+				<a href="/reference/modules/astro-fetch/" class="astro-3xlzsaht" data-sl-id="f130"><span class="astro-3xlzsaht">astro/fetch</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-hono/" class="astro-3xlzsaht" data-sl-id="f142"><span class="astro-3xlzsaht">astro/hono</span></a>
+				<a href="/reference/modules/astro-hono/" class="astro-3xlzsaht" data-sl-id="f131"><span class="astro-3xlzsaht">astro/hono</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-i18n/" class="astro-3xlzsaht" data-sl-id="f143"><span class="astro-3xlzsaht">astro:i18n</span></a>
+				<a href="/reference/modules/astro-i18n/" class="astro-3xlzsaht" data-sl-id="f132"><span class="astro-3xlzsaht">astro:i18n</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-middleware/" class="astro-3xlzsaht" data-sl-id="f144"><span class="astro-3xlzsaht">astro:middleware</span></a>
+				<a href="/reference/modules/astro-middleware/" class="astro-3xlzsaht" data-sl-id="f133"><span class="astro-3xlzsaht">astro:middleware</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-static-paths/" class="astro-3xlzsaht" data-sl-id="f145"><span class="astro-3xlzsaht">astro:static-paths</span></a>
+				<a href="/reference/modules/astro-static-paths/" class="astro-3xlzsaht" data-sl-id="f134"><span class="astro-3xlzsaht">astro:static-paths</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-transitions/" class="astro-3xlzsaht" data-sl-id="f146"><span class="astro-3xlzsaht">astro:transitions</span></a>
+				<a href="/reference/modules/astro-transitions/" class="astro-3xlzsaht" data-sl-id="f135"><span class="astro-3xlzsaht">astro:transitions</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/modules/astro-zod/" class="astro-3xlzsaht" data-sl-id="f147"><span class="astro-3xlzsaht">astro/zod</span></a>
+				<a href="/reference/modules/astro-zod/" class="astro-3xlzsaht" data-sl-id="f136"><span class="astro-3xlzsaht">astro/zod</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f148"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f137"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Otras APIs de desarrollo</span>
 								
 							</span>
@@ -575,35 +566,35 @@
 						<sl-sidebar-restore data-index="13"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/reference/integrations-reference/" class="astro-3xlzsaht" data-sl-id="f149"><span class="astro-3xlzsaht">API de integración</span></a>
+				<a href="/reference/integrations-reference/" class="astro-3xlzsaht" data-sl-id="f138"><span class="astro-3xlzsaht">API de integración</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/adapter-reference/" class="astro-3xlzsaht" data-sl-id="f150"><span class="astro-3xlzsaht">API de adaptador</span></a>
+				<a href="/reference/adapter-reference/" class="astro-3xlzsaht" data-sl-id="f139"><span class="astro-3xlzsaht">API de adaptador</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/renderer-reference/" class="astro-3xlzsaht" data-sl-id="f151"><span class="astro-3xlzsaht">API de renderizador</span></a>
+				<a href="/reference/renderer-reference/" class="astro-3xlzsaht" data-sl-id="f140"><span class="astro-3xlzsaht">API de renderizador</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/content-loader-reference/" class="astro-3xlzsaht" data-sl-id="f152"><span class="astro-3xlzsaht">API de Content Loader</span></a>
+				<a href="/reference/content-loader-reference/" class="astro-3xlzsaht" data-sl-id="f141"><span class="astro-3xlzsaht">API de Content Loader</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/image-service-reference/" class="astro-3xlzsaht" data-sl-id="f153"><span class="astro-3xlzsaht">API de servicio de imágenes</span></a>
+				<a href="/reference/image-service-reference/" class="astro-3xlzsaht" data-sl-id="f142"><span class="astro-3xlzsaht">API de servicio de imágenes</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/dev-toolbar-app-reference/" class="astro-3xlzsaht" data-sl-id="f154"><span class="astro-3xlzsaht">API de aplicaciones de barra de herramientas de desarrollo</span></a>
+				<a href="/reference/dev-toolbar-app-reference/" class="astro-3xlzsaht" data-sl-id="f143"><span class="astro-3xlzsaht">API de aplicaciones de barra de herramientas de desarrollo</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/session-driver-reference/" class="astro-3xlzsaht" data-sl-id="f155"><span class="astro-3xlzsaht">API de controlador de sesiones</span></a>
+				<a href="/reference/session-driver-reference/" class="astro-3xlzsaht" data-sl-id="f144"><span class="astro-3xlzsaht">API de controlador de sesiones</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/font-provider-reference/" class="astro-3xlzsaht" data-sl-id="f156"><span class="astro-3xlzsaht">API de proveedor de fuentes</span></a>
+				<a href="/reference/font-provider-reference/" class="astro-3xlzsaht" data-sl-id="f145"><span class="astro-3xlzsaht">API de proveedor de fuentes</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/cache-provider-reference/" class="astro-3xlzsaht" data-sl-id="f157"><span class="astro-3xlzsaht">API de proveedor de caché</span></a>
+				<a href="/reference/cache-provider-reference/" class="astro-3xlzsaht" data-sl-id="f146"><span class="astro-3xlzsaht">API de proveedor de caché</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/logger-reference/" class="astro-3xlzsaht" data-sl-id="f158"><span class="astro-3xlzsaht">API de logger</span></a>
+				<a href="/reference/logger-reference/" class="astro-3xlzsaht" data-sl-id="f147"><span class="astro-3xlzsaht">API de logger</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/container-reference/" class="astro-3xlzsaht" data-sl-id="f159"><span class="astro-3xlzsaht">API de contenedor (experimental)</span></a>
+				<a href="/reference/container-reference/" class="astro-3xlzsaht" data-sl-id="f148"><span class="astro-3xlzsaht">API de contenedor (experimental)</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/programmatic-reference/" class="astro-3xlzsaht" data-sl-id="f160"><span class="astro-3xlzsaht">API programática de Astro (experimental)</span></a>
+				<a href="/reference/programmatic-reference/" class="astro-3xlzsaht" data-sl-id="f149"><span class="astro-3xlzsaht">API programática de Astro (experimental)</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details open="" class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f161"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f150"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Funciones experimentales</span>
 								
 							</span>
@@ -611,22 +602,22 @@
 						<sl-sidebar-restore data-index="14"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/reference/experimental-flags/" class="astro-3xlzsaht" data-sl-id="f162"><span class="astro-3xlzsaht">Configuración de flags experimentales</span></a>
+				<a href="/reference/experimental-flags/" class="astro-3xlzsaht" data-sl-id="f151"><span class="astro-3xlzsaht">Configuración de flags experimentales</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/experimental-flags/client-prerender/" class="astro-3xlzsaht" data-sl-id="f163"><span class="astro-3xlzsaht">Prerrenderizado del cliente</span></a>
+				<a href="/reference/experimental-flags/client-prerender/" class="astro-3xlzsaht" data-sl-id="f152"><span class="astro-3xlzsaht">Prerrenderizado del cliente</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/experimental-flags/content-intellisense/" class="astro-3xlzsaht" data-sl-id="f164"><span class="astro-3xlzsaht">Intellisense para colecciones</span></a>
+				<a href="/reference/experimental-flags/content-intellisense/" class="astro-3xlzsaht" data-sl-id="f153"><span class="astro-3xlzsaht">Intellisense para colecciones</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/experimental-flags/chrome-devtools-workspace/" class="astro-3xlzsaht" data-sl-id="f165"><span class="astro-3xlzsaht">Espacio de trabajo de Chrome DevTools</span></a>
+				<a href="/reference/experimental-flags/chrome-devtools-workspace/" class="astro-3xlzsaht" data-sl-id="f154"><span class="astro-3xlzsaht">Espacio de trabajo de Chrome DevTools</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/experimental-flags/svg-optimization/" class="astro-3xlzsaht" data-sl-id="f166"><span class="astro-3xlzsaht">Optimización de SVG</span></a>
+				<a href="/reference/experimental-flags/svg-optimization/" class="astro-3xlzsaht" data-sl-id="f155"><span class="astro-3xlzsaht">Optimización de SVG</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/legacy-flags/" class="large astro-3xlzsaht" data-sl-id="f167"><span class="astro-3xlzsaht">Flags heredados</span></a>
+				<a href="/reference/legacy-flags/" class="large astro-3xlzsaht" data-sl-id="f156"><span class="astro-3xlzsaht">Flags heredados</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/reference/error-reference/" aria-current="page" class="large astro-3xlzsaht" data-sl-id="f168"><span class="astro-3xlzsaht">Referencia de errores</span></a>
+				<a href="/reference/error-reference/" aria-current="page" class="large astro-3xlzsaht" data-sl-id="f157"><span class="astro-3xlzsaht">Referencia de errores</span></a>
 			</li>
 </ul>
 				
@@ -635,7 +626,7 @@
 					<ul class="top-level astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f169"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f158"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Frameworks de UI</span>
 								
 							</span>
@@ -643,23 +634,23 @@
 						<sl-sidebar-restore data-index="15"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/alpinejs/" class="astro-3xlzsaht" data-sl-id="f170"><span class="astro-3xlzsaht">Alpine.js</span></a>
+				<a href="/guides/integrations-guide/alpinejs/" class="astro-3xlzsaht" data-sl-id="f159"><span class="astro-3xlzsaht">Alpine.js</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/preact/" class="astro-3xlzsaht" data-sl-id="f171"><span class="astro-3xlzsaht">Preact</span></a>
+				<a href="/guides/integrations-guide/preact/" class="astro-3xlzsaht" data-sl-id="f160"><span class="astro-3xlzsaht">Preact</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/react/" class="astro-3xlzsaht" data-sl-id="f172"><span class="astro-3xlzsaht">React</span></a>
+				<a href="/guides/integrations-guide/react/" class="astro-3xlzsaht" data-sl-id="f161"><span class="astro-3xlzsaht">React</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/solid-js/" class="astro-3xlzsaht" data-sl-id="f173"><span class="astro-3xlzsaht">SolidJS</span></a>
+				<a href="/guides/integrations-guide/solid-js/" class="astro-3xlzsaht" data-sl-id="f162"><span class="astro-3xlzsaht">SolidJS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/svelte/" class="astro-3xlzsaht" data-sl-id="f174"><span class="astro-3xlzsaht">Svelte</span></a>
+				<a href="/guides/integrations-guide/svelte/" class="astro-3xlzsaht" data-sl-id="f163"><span class="astro-3xlzsaht">Svelte</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/vue/" class="astro-3xlzsaht" data-sl-id="f175"><span class="astro-3xlzsaht">Vue</span></a>
+				<a href="/guides/integrations-guide/vue/" class="astro-3xlzsaht" data-sl-id="f164"><span class="astro-3xlzsaht">Vue</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f176"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f165"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Adaptadores</span>
 								
 							</span>
@@ -667,19 +658,19 @@
 						<sl-sidebar-restore data-index="16"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/cloudflare/" class="astro-3xlzsaht" data-sl-id="f177"><span class="astro-3xlzsaht">Cloudflare</span></a>
+				<a href="/guides/integrations-guide/cloudflare/" class="astro-3xlzsaht" data-sl-id="f166"><span class="astro-3xlzsaht">Cloudflare</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/netlify/" class="astro-3xlzsaht" data-sl-id="f178"><span class="astro-3xlzsaht">Netlify</span></a>
+				<a href="/guides/integrations-guide/netlify/" class="astro-3xlzsaht" data-sl-id="f167"><span class="astro-3xlzsaht">Netlify</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/node/" class="astro-3xlzsaht" data-sl-id="f179"><span class="astro-3xlzsaht">Node</span></a>
+				<a href="/guides/integrations-guide/node/" class="astro-3xlzsaht" data-sl-id="f168"><span class="astro-3xlzsaht">Node</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/vercel/" class="astro-3xlzsaht" data-sl-id="f180"><span class="astro-3xlzsaht">Vercel</span></a>
+				<a href="/guides/integrations-guide/vercel/" class="astro-3xlzsaht" data-sl-id="f169"><span class="astro-3xlzsaht">Vercel</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f181"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f170"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Otras integraciones oficiales</span>
 								
 							</span>
@@ -687,19 +678,19 @@
 						<sl-sidebar-restore data-index="17"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/markdoc/" class="astro-3xlzsaht" data-sl-id="f182"><span class="astro-3xlzsaht">Markdoc</span></a>
+				<a href="/guides/integrations-guide/markdoc/" class="astro-3xlzsaht" data-sl-id="f171"><span class="astro-3xlzsaht">Markdoc</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/mdx/" class="astro-3xlzsaht" data-sl-id="f183"><span class="astro-3xlzsaht">MDX</span></a>
+				<a href="/guides/integrations-guide/mdx/" class="astro-3xlzsaht" data-sl-id="f172"><span class="astro-3xlzsaht">MDX</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/partytown/" class="astro-3xlzsaht" data-sl-id="f184"><span class="astro-3xlzsaht">Partytown</span></a>
+				<a href="/guides/integrations-guide/partytown/" class="astro-3xlzsaht" data-sl-id="f173"><span class="astro-3xlzsaht">Partytown</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/integrations-guide/sitemap/" class="astro-3xlzsaht" data-sl-id="f185"><span class="astro-3xlzsaht">Sitemap</span></a>
+				<a href="/guides/integrations-guide/sitemap/" class="astro-3xlzsaht" data-sl-id="f174"><span class="astro-3xlzsaht">Sitemap</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f186"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f175"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Guías de despliegue</span>
 								
 							</span>
@@ -707,77 +698,77 @@
 						<sl-sidebar-restore data-index="18"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/deploy/" class="astro-3xlzsaht" data-sl-id="f187"><span class="astro-3xlzsaht">Vista general de despliegue</span></a>
+				<a href="/guides/deploy/" class="astro-3xlzsaht" data-sl-id="f176"><span class="astro-3xlzsaht">Vista general de despliegue</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/aws/" class="astro-3xlzsaht" data-sl-id="f188"><span class="astro-3xlzsaht">AWS</span></a>
+				<a href="/guides/deploy/aws/" class="astro-3xlzsaht" data-sl-id="f177"><span class="astro-3xlzsaht">AWS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/aws-via-flightcontrol/" class="astro-3xlzsaht" data-sl-id="f189"><span class="astro-3xlzsaht">AWS a través de Flightcontrol</span></a>
+				<a href="/guides/deploy/aws-via-flightcontrol/" class="astro-3xlzsaht" data-sl-id="f178"><span class="astro-3xlzsaht">AWS a través de Flightcontrol</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/aws-via-sst/" class="astro-3xlzsaht" data-sl-id="f190"><span class="astro-3xlzsaht">AWS a través de SST</span></a>
+				<a href="/guides/deploy/aws-via-sst/" class="astro-3xlzsaht" data-sl-id="f179"><span class="astro-3xlzsaht">AWS a través de SST</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/azion/" class="astro-3xlzsaht" data-sl-id="f191"><span class="astro-3xlzsaht">Azion</span></a>
+				<a href="/guides/deploy/azion/" class="astro-3xlzsaht" data-sl-id="f180"><span class="astro-3xlzsaht">Azion</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/buddy/" class="astro-3xlzsaht" data-sl-id="f192"><span class="astro-3xlzsaht">Buddy</span></a>
+				<a href="/guides/deploy/buddy/" class="astro-3xlzsaht" data-sl-id="f181"><span class="astro-3xlzsaht">Buddy</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/cleavr/" class="astro-3xlzsaht" data-sl-id="f193"><span class="astro-3xlzsaht">Cleavr</span></a>
+				<a href="/guides/deploy/cleavr/" class="astro-3xlzsaht" data-sl-id="f182"><span class="astro-3xlzsaht">Cleavr</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/clever-cloud/" class="astro-3xlzsaht" data-sl-id="f194"><span class="astro-3xlzsaht">Clever Cloud</span></a>
+				<a href="/guides/deploy/clever-cloud/" class="astro-3xlzsaht" data-sl-id="f183"><span class="astro-3xlzsaht">Clever Cloud</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/cloudflare/" class="astro-3xlzsaht" data-sl-id="f195"><span class="astro-3xlzsaht">Cloudflare</span></a>
+				<a href="/guides/deploy/cloudflare/" class="astro-3xlzsaht" data-sl-id="f184"><span class="astro-3xlzsaht">Cloudflare</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/cloudray/" class="astro-3xlzsaht" data-sl-id="f196"><span class="astro-3xlzsaht">CloudRay</span></a>
+				<a href="/guides/deploy/cloudray/" class="astro-3xlzsaht" data-sl-id="f185"><span class="astro-3xlzsaht">CloudRay</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/deno/" class="astro-3xlzsaht" data-sl-id="f197"><span class="astro-3xlzsaht">Deno Deploy</span></a>
+				<a href="/guides/deploy/deno/" class="astro-3xlzsaht" data-sl-id="f186"><span class="astro-3xlzsaht">Deno Deploy</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/deployhq/" class="astro-3xlzsaht" data-sl-id="f198"><span class="astro-3xlzsaht">DeployHQ</span></a>
+				<a href="/guides/deploy/deployhq/" class="astro-3xlzsaht" data-sl-id="f187"><span class="astro-3xlzsaht">DeployHQ</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/edgeone-pages/" class="astro-3xlzsaht" data-sl-id="f199"><span class="astro-3xlzsaht">EdgeOne Pages</span></a>
+				<a href="/guides/deploy/edgeone-pages/" class="astro-3xlzsaht" data-sl-id="f188"><span class="astro-3xlzsaht">EdgeOne Pages</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/firebase/" class="astro-3xlzsaht" data-sl-id="f200"><span class="astro-3xlzsaht">Firebase</span></a>
+				<a href="/guides/deploy/firebase/" class="astro-3xlzsaht" data-sl-id="f189"><span class="astro-3xlzsaht">Firebase</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/fleek/" class="astro-3xlzsaht" data-sl-id="f201"><span class="astro-3xlzsaht">Fleek</span></a>
+				<a href="/guides/deploy/fleek/" class="astro-3xlzsaht" data-sl-id="f190"><span class="astro-3xlzsaht">Fleek</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/flyio/" class="astro-3xlzsaht" data-sl-id="f202"><span class="astro-3xlzsaht">Fly.io</span></a>
+				<a href="/guides/deploy/flyio/" class="astro-3xlzsaht" data-sl-id="f191"><span class="astro-3xlzsaht">Fly.io</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/github/" class="astro-3xlzsaht" data-sl-id="f203"><span class="astro-3xlzsaht">GitHub Pages</span></a>
+				<a href="/guides/deploy/github/" class="astro-3xlzsaht" data-sl-id="f192"><span class="astro-3xlzsaht">GitHub Pages</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/gitlab/" class="astro-3xlzsaht" data-sl-id="f204"><span class="astro-3xlzsaht">GitLab Pages</span></a>
+				<a href="/guides/deploy/gitlab/" class="astro-3xlzsaht" data-sl-id="f193"><span class="astro-3xlzsaht">GitLab Pages</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/google-cloud/" class="astro-3xlzsaht" data-sl-id="f205"><span class="astro-3xlzsaht">Google Cloud</span></a>
+				<a href="/guides/deploy/google-cloud/" class="astro-3xlzsaht" data-sl-id="f194"><span class="astro-3xlzsaht">Google Cloud</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/heroku/" class="astro-3xlzsaht" data-sl-id="f206"><span class="astro-3xlzsaht">Heroku</span></a>
+				<a href="/guides/deploy/heroku/" class="astro-3xlzsaht" data-sl-id="f195"><span class="astro-3xlzsaht">Heroku</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/hostinger/" class="astro-3xlzsaht" data-sl-id="f207"><span class="astro-3xlzsaht">Hostinger</span></a>
+				<a href="/guides/deploy/hostinger/" class="astro-3xlzsaht" data-sl-id="f196"><span class="astro-3xlzsaht">Hostinger</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/microsoft-azure/" class="astro-3xlzsaht" data-sl-id="f208"><span class="astro-3xlzsaht">Microsoft Azure</span></a>
+				<a href="/guides/deploy/microsoft-azure/" class="astro-3xlzsaht" data-sl-id="f197"><span class="astro-3xlzsaht">Microsoft Azure</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/netlify/" class="astro-3xlzsaht" data-sl-id="f209"><span class="astro-3xlzsaht">Netlify</span></a>
+				<a href="/guides/deploy/netlify/" class="astro-3xlzsaht" data-sl-id="f198"><span class="astro-3xlzsaht">Netlify</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/railway/" class="astro-3xlzsaht" data-sl-id="f210"><span class="astro-3xlzsaht">Railway</span></a>
+				<a href="/guides/deploy/railway/" class="astro-3xlzsaht" data-sl-id="f199"><span class="astro-3xlzsaht">Railway</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/render/" class="astro-3xlzsaht" data-sl-id="f211"><span class="astro-3xlzsaht">Render</span></a>
+				<a href="/guides/deploy/render/" class="astro-3xlzsaht" data-sl-id="f200"><span class="astro-3xlzsaht">Render</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/seenode/" class="astro-3xlzsaht" data-sl-id="f212"><span class="astro-3xlzsaht">Seenode</span></a>
+				<a href="/guides/deploy/seenode/" class="astro-3xlzsaht" data-sl-id="f201"><span class="astro-3xlzsaht">Seenode</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/sevalla/" class="astro-3xlzsaht" data-sl-id="f213"><span class="astro-3xlzsaht">Sevalla</span></a>
+				<a href="/guides/deploy/sevalla/" class="astro-3xlzsaht" data-sl-id="f202"><span class="astro-3xlzsaht">Sevalla</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/stormkit/" class="astro-3xlzsaht" data-sl-id="f214"><span class="astro-3xlzsaht">Stormkit</span></a>
+				<a href="/guides/deploy/stormkit/" class="astro-3xlzsaht" data-sl-id="f203"><span class="astro-3xlzsaht">Stormkit</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/surge/" class="astro-3xlzsaht" data-sl-id="f215"><span class="astro-3xlzsaht">Surge</span></a>
+				<a href="/guides/deploy/surge/" class="astro-3xlzsaht" data-sl-id="f204"><span class="astro-3xlzsaht">Surge</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/vercel/" class="astro-3xlzsaht" data-sl-id="f216"><span class="astro-3xlzsaht">Vercel</span></a>
+				<a href="/guides/deploy/vercel/" class="astro-3xlzsaht" data-sl-id="f205"><span class="astro-3xlzsaht">Vercel</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/zeabur/" class="astro-3xlzsaht" data-sl-id="f217"><span class="astro-3xlzsaht">Zeabur</span></a>
+				<a href="/guides/deploy/zeabur/" class="astro-3xlzsaht" data-sl-id="f206"><span class="astro-3xlzsaht">Zeabur</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/zephyr/" class="astro-3xlzsaht" data-sl-id="f218"><span class="astro-3xlzsaht">Zephyr Cloud</span></a>
+				<a href="/guides/deploy/zephyr/" class="astro-3xlzsaht" data-sl-id="f207"><span class="astro-3xlzsaht">Zephyr Cloud</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/deploy/zerops/" class="astro-3xlzsaht" data-sl-id="f219"><span class="astro-3xlzsaht">Zerops</span></a>
+				<a href="/guides/deploy/zerops/" class="astro-3xlzsaht" data-sl-id="f208"><span class="astro-3xlzsaht">Zerops</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f220"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f209"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Sistemas de gestión de contenidos (CMS)</span>
 								
 							</span>
@@ -785,99 +776,99 @@
 						<sl-sidebar-restore data-index="19"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/cms/" class="astro-3xlzsaht" data-sl-id="f221"><span class="astro-3xlzsaht">Vista general de CMS</span></a>
+				<a href="/guides/cms/" class="astro-3xlzsaht" data-sl-id="f210"><span class="astro-3xlzsaht">Vista general de CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/apostrophecms/" class="astro-3xlzsaht" data-sl-id="f222"><span class="astro-3xlzsaht">ApostropheCMS</span></a>
+				<a href="/guides/cms/apostrophecms/" class="astro-3xlzsaht" data-sl-id="f211"><span class="astro-3xlzsaht">ApostropheCMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/builderio/" class="astro-3xlzsaht" data-sl-id="f223"><span class="astro-3xlzsaht">Builder.io</span></a>
+				<a href="/guides/cms/builderio/" class="astro-3xlzsaht" data-sl-id="f212"><span class="astro-3xlzsaht">Builder.io</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/buttercms/" class="astro-3xlzsaht" data-sl-id="f224"><span class="astro-3xlzsaht">ButterCMS</span></a>
+				<a href="/guides/cms/buttercms/" class="astro-3xlzsaht" data-sl-id="f213"><span class="astro-3xlzsaht">ButterCMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/caisy/" class="astro-3xlzsaht" data-sl-id="f225"><span class="astro-3xlzsaht">Caisy</span></a>
+				<a href="/guides/cms/caisy/" class="astro-3xlzsaht" data-sl-id="f214"><span class="astro-3xlzsaht">Caisy</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/cloudcannon/" class="astro-3xlzsaht" data-sl-id="f226"><span class="astro-3xlzsaht">CloudCannon</span></a>
+				<a href="/guides/cms/cloudcannon/" class="astro-3xlzsaht" data-sl-id="f215"><span class="astro-3xlzsaht">CloudCannon</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/contentful/" class="astro-3xlzsaht" data-sl-id="f227"><span class="astro-3xlzsaht">Contentful</span></a>
+				<a href="/guides/cms/contentful/" class="astro-3xlzsaht" data-sl-id="f216"><span class="astro-3xlzsaht">Contentful</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/cosmic/" class="astro-3xlzsaht" data-sl-id="f228"><span class="astro-3xlzsaht">Cosmic</span></a>
+				<a href="/guides/cms/cosmic/" class="astro-3xlzsaht" data-sl-id="f217"><span class="astro-3xlzsaht">Cosmic</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/craft-cms/" class="astro-3xlzsaht" data-sl-id="f229"><span class="astro-3xlzsaht">Craft CMS</span></a>
+				<a href="/guides/cms/craft-cms/" class="astro-3xlzsaht" data-sl-id="f218"><span class="astro-3xlzsaht">Craft CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/craft-cross-cms/" class="astro-3xlzsaht" data-sl-id="f230"><span class="astro-3xlzsaht">Craft Cross CMS</span></a>
+				<a href="/guides/cms/craft-cross-cms/" class="astro-3xlzsaht" data-sl-id="f219"><span class="astro-3xlzsaht">Craft Cross CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/crystallize/" class="astro-3xlzsaht" data-sl-id="f231"><span class="astro-3xlzsaht">Crystallize</span></a>
+				<a href="/guides/cms/crystallize/" class="astro-3xlzsaht" data-sl-id="f220"><span class="astro-3xlzsaht">Crystallize</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/datocms/" class="astro-3xlzsaht" data-sl-id="f232"><span class="astro-3xlzsaht">DatoCMS</span></a>
+				<a href="/guides/cms/datocms/" class="astro-3xlzsaht" data-sl-id="f221"><span class="astro-3xlzsaht">DatoCMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/decap-cms/" class="astro-3xlzsaht" data-sl-id="f233"><span class="astro-3xlzsaht">Decap CMS</span></a>
+				<a href="/guides/cms/decap-cms/" class="astro-3xlzsaht" data-sl-id="f222"><span class="astro-3xlzsaht">Decap CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/directus/" class="astro-3xlzsaht" data-sl-id="f234"><span class="astro-3xlzsaht">Directus</span></a>
+				<a href="/guides/cms/directus/" class="astro-3xlzsaht" data-sl-id="f223"><span class="astro-3xlzsaht">Directus</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/drupal/" class="astro-3xlzsaht" data-sl-id="f235"><span class="astro-3xlzsaht">Drupal</span></a>
+				<a href="/guides/cms/drupal/" class="astro-3xlzsaht" data-sl-id="f224"><span class="astro-3xlzsaht">Drupal</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/flotiq/" class="astro-3xlzsaht" data-sl-id="f236"><span class="astro-3xlzsaht">Flotiq</span></a>
+				<a href="/guides/cms/flotiq/" class="astro-3xlzsaht" data-sl-id="f225"><span class="astro-3xlzsaht">Flotiq</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/frontmatter-cms/" class="astro-3xlzsaht" data-sl-id="f237"><span class="astro-3xlzsaht">Front Matter CMS</span></a>
+				<a href="/guides/cms/frontmatter-cms/" class="astro-3xlzsaht" data-sl-id="f226"><span class="astro-3xlzsaht">Front Matter CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/ghost/" class="astro-3xlzsaht" data-sl-id="f238"><span class="astro-3xlzsaht">Ghost</span></a>
+				<a href="/guides/cms/ghost/" class="astro-3xlzsaht" data-sl-id="f227"><span class="astro-3xlzsaht">Ghost</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/gitcms/" class="astro-3xlzsaht" data-sl-id="f239"><span class="astro-3xlzsaht">GitCMS</span></a>
+				<a href="/guides/cms/gitcms/" class="astro-3xlzsaht" data-sl-id="f228"><span class="astro-3xlzsaht">GitCMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/hashnode/" class="astro-3xlzsaht" data-sl-id="f240"><span class="astro-3xlzsaht">Hashnode</span></a>
+				<a href="/guides/cms/hashnode/" class="astro-3xlzsaht" data-sl-id="f229"><span class="astro-3xlzsaht">Hashnode</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/hygraph/" class="astro-3xlzsaht" data-sl-id="f241"><span class="astro-3xlzsaht">Hygraph</span></a>
+				<a href="/guides/cms/hygraph/" class="astro-3xlzsaht" data-sl-id="f230"><span class="astro-3xlzsaht">Hygraph</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/jekyllpad/" class="astro-3xlzsaht" data-sl-id="f242"><span class="astro-3xlzsaht">JekyllPad</span></a>
+				<a href="/guides/cms/jekyllpad/" class="astro-3xlzsaht" data-sl-id="f231"><span class="astro-3xlzsaht">JekyllPad</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/keystatic/" class="astro-3xlzsaht" data-sl-id="f243"><span class="astro-3xlzsaht">Keystatic</span></a>
+				<a href="/guides/cms/keystatic/" class="astro-3xlzsaht" data-sl-id="f232"><span class="astro-3xlzsaht">Keystatic</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/keystonejs/" class="astro-3xlzsaht" data-sl-id="f244"><span class="astro-3xlzsaht">KeystoneJS</span></a>
+				<a href="/guides/cms/keystonejs/" class="astro-3xlzsaht" data-sl-id="f233"><span class="astro-3xlzsaht">KeystoneJS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/kontent-ai/" class="astro-3xlzsaht" data-sl-id="f245"><span class="astro-3xlzsaht">Kontent.ai</span></a>
+				<a href="/guides/cms/kontent-ai/" class="astro-3xlzsaht" data-sl-id="f234"><span class="astro-3xlzsaht">Kontent.ai</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/microcms/" class="astro-3xlzsaht" data-sl-id="f246"><span class="astro-3xlzsaht">microCMS</span></a>
+				<a href="/guides/cms/microcms/" class="astro-3xlzsaht" data-sl-id="f235"><span class="astro-3xlzsaht">microCMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/optimizely/" class="astro-3xlzsaht" data-sl-id="f247"><span class="astro-3xlzsaht">Optimizely CMS</span></a>
+				<a href="/guides/cms/optimizely/" class="astro-3xlzsaht" data-sl-id="f236"><span class="astro-3xlzsaht">Optimizely CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/pages-cms/" class="astro-3xlzsaht" data-sl-id="f248"><span class="astro-3xlzsaht">Pages CMS</span></a>
+				<a href="/guides/cms/pages-cms/" class="astro-3xlzsaht" data-sl-id="f237"><span class="astro-3xlzsaht">Pages CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/payload/" class="astro-3xlzsaht" data-sl-id="f249"><span class="astro-3xlzsaht">Payload CMS</span></a>
+				<a href="/guides/cms/payload/" class="astro-3xlzsaht" data-sl-id="f238"><span class="astro-3xlzsaht">Payload CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/preprcms/" class="astro-3xlzsaht" data-sl-id="f250"><span class="astro-3xlzsaht">Prepr CMS</span></a>
+				<a href="/guides/cms/preprcms/" class="astro-3xlzsaht" data-sl-id="f239"><span class="astro-3xlzsaht">Prepr CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/prismic/" class="astro-3xlzsaht" data-sl-id="f251"><span class="astro-3xlzsaht">Prismic</span></a>
+				<a href="/guides/cms/prismic/" class="astro-3xlzsaht" data-sl-id="f240"><span class="astro-3xlzsaht">Prismic</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/sanity/" class="astro-3xlzsaht" data-sl-id="f252"><span class="astro-3xlzsaht">Sanity</span></a>
+				<a href="/guides/cms/sanity/" class="astro-3xlzsaht" data-sl-id="f241"><span class="astro-3xlzsaht">Sanity</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/sitecore/" class="astro-3xlzsaht" data-sl-id="f253"><span class="astro-3xlzsaht">Sitecore XM</span></a>
+				<a href="/guides/cms/sitecore/" class="astro-3xlzsaht" data-sl-id="f242"><span class="astro-3xlzsaht">Sitecore XM</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/sitepins/" class="astro-3xlzsaht" data-sl-id="f254"><span class="astro-3xlzsaht">Sitepins</span></a>
+				<a href="/guides/cms/sitepins/" class="astro-3xlzsaht" data-sl-id="f243"><span class="astro-3xlzsaht">Sitepins</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/spinal/" class="astro-3xlzsaht" data-sl-id="f255"><span class="astro-3xlzsaht">Spinal</span></a>
+				<a href="/guides/cms/spinal/" class="astro-3xlzsaht" data-sl-id="f244"><span class="astro-3xlzsaht">Spinal</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/statamic/" class="astro-3xlzsaht" data-sl-id="f256"><span class="astro-3xlzsaht">Statamic</span></a>
+				<a href="/guides/cms/statamic/" class="astro-3xlzsaht" data-sl-id="f245"><span class="astro-3xlzsaht">Statamic</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/storyblok/" class="astro-3xlzsaht" data-sl-id="f257"><span class="astro-3xlzsaht">Storyblok</span></a>
+				<a href="/guides/cms/storyblok/" class="astro-3xlzsaht" data-sl-id="f246"><span class="astro-3xlzsaht">Storyblok</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/strapi/" class="astro-3xlzsaht" data-sl-id="f258"><span class="astro-3xlzsaht">Strapi</span></a>
+				<a href="/guides/cms/strapi/" class="astro-3xlzsaht" data-sl-id="f247"><span class="astro-3xlzsaht">Strapi</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/studiocms/" class="astro-3xlzsaht" data-sl-id="f259"><span class="astro-3xlzsaht">StudioCMS</span></a>
+				<a href="/guides/cms/studiocms/" class="astro-3xlzsaht" data-sl-id="f248"><span class="astro-3xlzsaht">StudioCMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/tina-cms/" class="astro-3xlzsaht" data-sl-id="f260"><span class="astro-3xlzsaht">TinaCMS</span></a>
+				<a href="/guides/cms/tina-cms/" class="astro-3xlzsaht" data-sl-id="f249"><span class="astro-3xlzsaht">TinaCMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/umbraco/" class="astro-3xlzsaht" data-sl-id="f261"><span class="astro-3xlzsaht">Umbraco</span></a>
+				<a href="/guides/cms/umbraco/" class="astro-3xlzsaht" data-sl-id="f250"><span class="astro-3xlzsaht">Umbraco</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/vault-cms/" class="astro-3xlzsaht" data-sl-id="f262"><span class="astro-3xlzsaht">Vault CMS</span></a>
+				<a href="/guides/cms/vault-cms/" class="astro-3xlzsaht" data-sl-id="f251"><span class="astro-3xlzsaht">Vault CMS</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/wordpress/" class="astro-3xlzsaht" data-sl-id="f263"><span class="astro-3xlzsaht">Wordpress</span></a>
+				<a href="/guides/cms/wordpress/" class="astro-3xlzsaht" data-sl-id="f252"><span class="astro-3xlzsaht">Wordpress</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/cms/zero/" class="astro-3xlzsaht" data-sl-id="f264"><span class="astro-3xlzsaht">Zero</span></a>
+				<a href="/guides/cms/zero/" class="astro-3xlzsaht" data-sl-id="f253"><span class="astro-3xlzsaht">Zero</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f265"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f254"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Servicios de backend</span>
 								
 							</span>
@@ -885,31 +876,31 @@
 						<sl-sidebar-restore data-index="20"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/backend/" class="astro-3xlzsaht" data-sl-id="f266"><span class="astro-3xlzsaht">Vista general de servicios de backend</span></a>
+				<a href="/guides/backend/" class="astro-3xlzsaht" data-sl-id="f255"><span class="astro-3xlzsaht">Vista general de servicios de backend</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/backend/appwrite/" class="astro-3xlzsaht" data-sl-id="f267"><span class="astro-3xlzsaht">Appwrite</span></a>
+				<a href="/guides/backend/appwrite/" class="astro-3xlzsaht" data-sl-id="f256"><span class="astro-3xlzsaht">Appwrite</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/backend/firebase/" class="astro-3xlzsaht" data-sl-id="f268"><span class="astro-3xlzsaht">Firebase</span></a>
+				<a href="/guides/backend/firebase/" class="astro-3xlzsaht" data-sl-id="f257"><span class="astro-3xlzsaht">Firebase</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/backend/neon/" class="astro-3xlzsaht" data-sl-id="f269"><span class="astro-3xlzsaht">Neon</span></a>
+				<a href="/guides/backend/neon/" class="astro-3xlzsaht" data-sl-id="f258"><span class="astro-3xlzsaht">Neon</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/backend/prisma-postgres/" class="astro-3xlzsaht" data-sl-id="f270"><span class="astro-3xlzsaht">Prisma Postgres</span></a>
+				<a href="/guides/backend/prisma-postgres/" class="astro-3xlzsaht" data-sl-id="f259"><span class="astro-3xlzsaht">Prisma Postgres</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/backend/scalekit/" class="astro-3xlzsaht" data-sl-id="f271"><span class="astro-3xlzsaht">Scalekit</span></a>
+				<a href="/guides/backend/scalekit/" class="astro-3xlzsaht" data-sl-id="f260"><span class="astro-3xlzsaht">Scalekit</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/backend/sentry/" class="astro-3xlzsaht" data-sl-id="f272"><span class="astro-3xlzsaht">Sentry</span></a>
+				<a href="/guides/backend/sentry/" class="astro-3xlzsaht" data-sl-id="f261"><span class="astro-3xlzsaht">Sentry</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/backend/supabase/" class="astro-3xlzsaht" data-sl-id="f273"><span class="astro-3xlzsaht">Supabase</span></a>
+				<a href="/guides/backend/supabase/" class="astro-3xlzsaht" data-sl-id="f262"><span class="astro-3xlzsaht">Supabase</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/backend/turso/" class="astro-3xlzsaht" data-sl-id="f274"><span class="astro-3xlzsaht">Turso</span></a>
+				<a href="/guides/backend/turso/" class="astro-3xlzsaht" data-sl-id="f263"><span class="astro-3xlzsaht">Turso</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/backend/xata/" class="astro-3xlzsaht" data-sl-id="f275"><span class="astro-3xlzsaht">Xata</span></a>
+				<a href="/guides/backend/xata/" class="astro-3xlzsaht" data-sl-id="f264"><span class="astro-3xlzsaht">Xata</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
 				<details class="astro-3xlzsaht">
-						<summary class="astro-3xlzsaht" data-sl-id="f276"><span class="group-label astro-3xlzsaht">
+						<summary class="astro-3xlzsaht" data-sl-id="f265"><span class="group-label astro-3xlzsaht">
 								<span class="large astro-3xlzsaht">Alojamiento de imágenes y video</span>
 								
 							</span>
@@ -917,22 +908,22 @@
 						<sl-sidebar-restore data-index="21"></sl-sidebar-restore>
 						<ul class="astro-3xlzsaht">
 	<li class="astro-3xlzsaht">
-				<a href="/guides/media/" class="astro-3xlzsaht" data-sl-id="f277"><span class="astro-3xlzsaht">Vista general del alojamiento de medios</span></a>
+				<a href="/guides/media/" class="astro-3xlzsaht" data-sl-id="f266"><span class="astro-3xlzsaht">Vista general del alojamiento de medios</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/media/cloudinary/" class="astro-3xlzsaht" data-sl-id="f278"><span class="astro-3xlzsaht">Cloudinary</span></a>
+				<a href="/guides/media/cloudinary/" class="astro-3xlzsaht" data-sl-id="f267"><span class="astro-3xlzsaht">Cloudinary</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/media/imagekit/" class="astro-3xlzsaht" data-sl-id="f279"><span class="astro-3xlzsaht">ImageKit</span></a>
+				<a href="/guides/media/imagekit/" class="astro-3xlzsaht" data-sl-id="f268"><span class="astro-3xlzsaht">ImageKit</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/media/mux/" class="astro-3xlzsaht" data-sl-id="f280"><span class="astro-3xlzsaht">Mux</span></a>
+				<a href="/guides/media/mux/" class="astro-3xlzsaht" data-sl-id="f269"><span class="astro-3xlzsaht">Mux</span></a>
 			</li>
 </ul>
 					</details>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/ecommerce/" class="large astro-3xlzsaht" data-sl-id="f281"><span class="astro-3xlzsaht">Comercio electrónico</span></a>
+				<a href="/guides/ecommerce/" class="large astro-3xlzsaht" data-sl-id="f270"><span class="astro-3xlzsaht">Comercio electrónico</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/authentication/" class="large astro-3xlzsaht" data-sl-id="f282"><span class="astro-3xlzsaht">Autenticación</span></a>
+				<a href="/guides/authentication/" class="large astro-3xlzsaht" data-sl-id="f271"><span class="astro-3xlzsaht">Autenticación</span></a>
 			</li><li class="astro-3xlzsaht">
-				<a href="/guides/testing/" class="large astro-3xlzsaht" data-sl-id="f283"><span class="astro-3xlzsaht">Pruebas</span></a>
+				<a href="/guides/testing/" class="large astro-3xlzsaht" data-sl-id="f272"><span class="astro-3xlzsaht">Pruebas</span></a>
 			</li>
 </ul>
 				
@@ -955,7 +946,7 @@
 <div class="md:sl-hidden astro-ssgxcmrq">
 	<div class="sl-flex astro-ilwx3stt">
 	<div dir="ltr" lang="en" class="sponsors astro-ul23vwyi">
-	<h2 class="sponsors-title astro-ul23vwyi" data-sl-id="f284">Patrocinado por</h2>
+	<h2 class="sponsors-title astro-ul23vwyi" data-sl-id="f273">Patrocinado por</h2>
 	<a href="https://www.netlify.com/?utm_campaign=Astro-2024&amp;utm_source=astro-referral" aria-label="Netlify" class="astro-ul23vwyi">
 		<svg viewBox="0 0 256 105" width="115" aria-hidden="true" fill="currentColor" class="astro-ul23vwyi">
 	<path fill="#32E6E2" d="M58.5 103.8V77.4l.5-.5h6.6l.6.5v26.4l-.6.5H59l-.5-.5Zm0-76.9V.5L59 0h6.6l.6.5V27l-.6.5H59l-.5-.5ZM35.8 85.2h-1l-4.4-4.5v-.9l8.5-8.5h4.7l.7.6v4.8l-8.5 8.5Zm-5.4-60.5v-.9l4.5-4.5h.9l8.5 8.5v4.8l-.7.6H39l-8.5-8.5ZM.5 48.3H38l.5.6v6.6l-.5.5H.5l-.5-.5v-6.6l.5-.6Zm255 0 .5.6v6.6l-.6.5h-37.8l-.6-.5 2.8-6.6.5-.6h35.1Z"></path>
@@ -1011,18 +1002,18 @@
 	<div class="mobile-preferences sl-flex astro-mjccoc4w">
 	<div class="social-icons astro-mjccoc4w">
 		
-			<a href="https://github.com/withastro/astro" rel="me" class="sl-flex astro-jkkqpltd" data-sl-id="f285"><span class="sr-only astro-jkkqpltd">GitHub</span>
-					<svg aria-hidden="true" class="astro-jkkqpltd astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"></path></svg></a><a href="https://astro.esdocu.com/chat" rel="me" class="sl-flex astro-jkkqpltd" data-sl-id="f286"><span class="sr-only astro-jkkqpltd">Discord</span>
+			<a href="https://github.com/withastro/astro" rel="me" class="sl-flex astro-jkkqpltd" data-sl-id="f274"><span class="sr-only astro-jkkqpltd">GitHub</span>
+					<svg aria-hidden="true" class="astro-jkkqpltd astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"></path></svg></a><a href="https://astro.esdocu.com/chat" rel="me" class="sl-flex astro-jkkqpltd" data-sl-id="f275"><span class="sr-only astro-jkkqpltd">Discord</span>
 					<svg aria-hidden="true" class="astro-jkkqpltd astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M20.32 4.37a19.8 19.8 0 0 0-4.93-1.51 13.78 13.78 0 0 0-.64 1.28 18.27 18.27 0 0 0-5.5 0 12.64 12.64 0 0 0-.64-1.28h-.05A19.74 19.74 0 0 0 3.64 4.4 20.26 20.26 0 0 0 .11 18.09l.02.02a19.9 19.9 0 0 0 6.04 3.03l.04-.02a14.24 14.24 0 0 0 1.23-2.03.08.08 0 0 0-.05-.07 13.1 13.1 0 0 1-1.9-.92.08.08 0 0 1 .02-.1 10.2 10.2 0 0 0 .41-.31h.04a14.2 14.2 0 0 0 12.1 0l.04.01a9.63 9.63 0 0 0 .4.32.08.08 0 0 1-.03.1 12.29 12.29 0 0 1-1.9.91.08.08 0 0 0-.02.1 15.97 15.97 0 0 0 1.27 2.01h.04a19.84 19.84 0 0 0 6.03-3.05v-.03a20.12 20.12 0 0 0-3.57-13.69ZM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42Zm7.97 0c-1.18 0-2.15-1.08-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.22 0 2.18 1.1 2.16 2.42 0 1.34-.94 2.42-2.16 2.42Z"></path></svg></a>
 		
 	</div>
 	<starlight-theme-select>
 	
 	<label style="--sl-select-width: 6.25em" class="astro-pl7p4lbc">
-	<span class="sr-only astro-pl7p4lbc" data-sl-id="f287">Seleccionar tema</span>
+	<span class="sr-only astro-pl7p4lbc" data-sl-id="f276">Seleccionar tema</span>
 	<svg aria-hidden="true" class="icon label-icon astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"></path></svg>
 	<select autocomplete="off" class="astro-pl7p4lbc">
-		<option value="dark" class="astro-pl7p4lbc" data-sl-id="f288">Oscuro</option><option value="light" class="astro-pl7p4lbc" data-sl-id="f289">Claro</option><option value="auto" selected="" class="astro-pl7p4lbc" data-sl-id="f290">Auto</option>
+		<option value="dark" class="astro-pl7p4lbc" data-sl-id="f277">Oscuro</option><option value="light" class="astro-pl7p4lbc" data-sl-id="f278">Claro</option><option value="auto" selected="" class="astro-pl7p4lbc" data-sl-id="f279">Auto</option>
 	</select>
 	<svg aria-hidden="true" class="icon caret astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"></path></svg>
 </label>
@@ -1034,16 +1025,7 @@
 </script>
 
 
-	<starlight-lang-select>
-			<label style="--sl-select-width: 7em" class="astro-pl7p4lbc">
-	<span class="sr-only astro-pl7p4lbc" data-sl-id="f291">Seleccionar idioma</span>
-	<svg aria-hidden="true" class="icon label-icon astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"></path></svg>
-	<select autocomplete="off" class="astro-pl7p4lbc">
-		<option value="/en/reference/errors/env-invalid-variables/" selected="" class="astro-pl7p4lbc" data-sl-id="f292">English</option><option value="/de/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f293">Deutsch</option><option value="/pt-br/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f294">Português do Brasil</option><option value="/es/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f295">Español</option><option value="/zh-cn/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f296">简体中文</option><option value="/zh-tw/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f297">正體中文</option><option value="/fr/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f298">Français</option><option value="/hi/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc">हिन्दी</option><option value="/ar/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc">العربية</option><option value="/ja/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f299">日本語</option><option value="/ko/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc">한국어</option><option value="/pl/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f300">Polski</option><option value="/ru/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc">Русский</option><option value="/it/reference/errors/env-invalid-variables/" class="astro-pl7p4lbc" data-sl-id="f301">Italiano</option>
-	</select>
-	<svg aria-hidden="true" class="icon caret astro-pl7p4lbc astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"></path></svg>
-</label>
-		</starlight-lang-select>
+	
 
 
 </div>
@@ -1052,7 +1034,7 @@
 
 <div class="desktop-footer sl-hidden md:sl-block astro-ssgxcmrq">
 	<div dir="ltr" lang="en" class="sponsors astro-ul23vwyi">
-	<h2 class="sponsors-title astro-ul23vwyi" data-sl-id="f302">Patrocinado por</h2>
+	<h2 class="sponsors-title astro-ul23vwyi" data-sl-id="f280">Patrocinado por</h2>
 	<a href="https://www.netlify.com/?utm_campaign=Astro-2024&amp;utm_source=astro-referral" aria-label="Netlify" class="astro-ul23vwyi">
 		<svg viewBox="0 0 256 105" width="115" aria-hidden="true" fill="currentColor" class="astro-ul23vwyi">
 	<path fill="#32E6E2" d="M58.5 103.8V77.4l.5-.5h6.6l.6.5v26.4l-.6.5H59l-.5-.5Zm0-76.9V.5L59 0h6.6l.6.5V27l-.6.5H59l-.5-.5ZM35.8 85.2h-1l-4.4-4.5v-.9l8.5-8.5h4.7l.7.6v4.8l-8.5 8.5Zm-5.4-60.5v-.9l4.5-4.5h.9l8.5 8.5v4.8l-.7.6H39l-8.5-8.5ZM.5 48.3H38l.5.6v6.6l-.5.5H.5l-.5-.5v-6.6l.5-.6Zm255 0 .5.6v6.6l-.6.5h-37.8l-.6-.5 2.8-6.6.5-.6h35.1Z"></path>
@@ -1120,17 +1102,17 @@
 			<nav aria-labelledby="starlight__on-this-page--mobile" class="astro-gl7qdvoz">
 				<details id="starlight__mobile-toc" class="astro-gl7qdvoz">
 					<summary id="starlight__on-this-page--mobile" class="sl-flex astro-gl7qdvoz">
-						<div class="toggle sl-flex astro-gl7qdvoz" data-sl-id="f303">En esta página
+						<div class="toggle sl-flex astro-gl7qdvoz" data-sl-id="f281">En esta página
 							<svg aria-hidden="true" class="caret astro-gl7qdvoz astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"></path></svg></div>
-						<span class="display-current astro-gl7qdvoz" data-sl-id="f304">Vista general</span>
+						<span class="display-current astro-gl7qdvoz" data-sl-id="f282">Vista general</span>
 					</summary>
 					<div class="dropdown astro-gl7qdvoz">
 						<ul class="isMobile astro-f35rxoh7" style="--depth: 0;">
 	<li style="--depth: 0;" class="astro-f35rxoh7">
-				<a href="#_top" style="--depth: 0;" class="astro-f35rxoh7" aria-current="true" data-sl-id="f305"><span style="--depth: 0;" class="astro-f35rxoh7">Vista general</span></a>
+				<a href="#_top" style="--depth: 0;" class="astro-f35rxoh7" aria-current="true" data-sl-id="f283"><span style="--depth: 0;" class="astro-f35rxoh7">Vista general</span></a>
 				
 			</li><li style="--depth: 0;" class="astro-f35rxoh7">
-				<a href="#what-went-wrong" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f306"><span style="--depth: 0;" class="astro-f35rxoh7">¿Qué salió mal?</span></a>
+				<a href="#what-went-wrong" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f284"><span style="--depth: 0;" class="astro-f35rxoh7">¿Qué salió mal?</span></a>
 				
 			</li>
 </ul>
@@ -1145,13 +1127,13 @@
 				<div class="sl-container astro-mbtvktjh">
 					<starlight-toc data-min-h="2" data-max-h="3">
 			<nav aria-labelledby="starlight__on-this-page">
-				<h2 id="starlight__on-this-page" data-sl-id="f307">En esta página</h2>
+				<h2 id="starlight__on-this-page" data-sl-id="f285">En esta página</h2>
 				<ul class="astro-f35rxoh7" style="--depth: 0;">
 	<li style="--depth: 0;" class="astro-f35rxoh7">
-				<a href="#_top" style="--depth: 0;" class="astro-f35rxoh7" aria-current="true" data-sl-id="f308"><span style="--depth: 0;" class="astro-f35rxoh7">Vista general</span></a>
+				<a href="#_top" style="--depth: 0;" class="astro-f35rxoh7" aria-current="true" data-sl-id="f286"><span style="--depth: 0;" class="astro-f35rxoh7">Vista general</span></a>
 				
 			</li><li style="--depth: 0;" class="astro-f35rxoh7">
-				<a href="#what-went-wrong" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f309"><span style="--depth: 0;" class="astro-f35rxoh7">¿Qué salió mal?</span></a>
+				<a href="#what-went-wrong" style="--depth: 0;" class="astro-f35rxoh7" data-sl-id="f287"><span style="--depth: 0;" class="astro-f35rxoh7">¿Qué salió mal?</span></a>
 				
 			</li>
 </ul>
@@ -1169,9 +1151,9 @@
 			
 <img src="/_astro/JamesQuick.BYVczE5K_Z27j1Lz.webp" alt="" loading="lazy" decoding="async" width="72" height="72" class="astro-2qw6dox2">
 		</div>
-		<h2 id="learn-astro-course-1" class="astro-2qw6dox2" data-sl-id="f310"><strong class="astro-2qw6dox2">Aprende Astro</strong> con James Q Quick</h2>
-		<p class="astro-2qw6dox2" data-sl-id="f311">Construye tu primer sitio con 35 lecciones interactivas de Scrimba</p>
-		<a class="sl-link-button not-content primary cta astro-2qw6dox2 astro-b66feiu3" href="https://scrimba.com/intro-to-astro-c00ar0fi5u?via=astro" data-scrimba-cta="true" data-sl-id="f312">Consigue un 20% de descuento</a>
+		<h2 id="learn-astro-course-1" class="astro-2qw6dox2" data-sl-id="f288"><strong class="astro-2qw6dox2">Aprende Astro</strong> con James Q Quick</h2>
+		<p class="astro-2qw6dox2" data-sl-id="f289">Construye tu primer sitio con 35 lecciones interactivas de Scrimba</p>
+		<a class="sl-link-button not-content primary cta astro-2qw6dox2 astro-b66feiu3" href="https://scrimba.com/intro-to-astro-c00ar0fi5u?via=astro" data-scrimba-cta="true" data-sl-id="f290">Consigue un 20% de descuento</a>
 	</aside>
 </div>
 
@@ -1189,7 +1171,7 @@
 					
 								<div class="content-panel astro-g42ntuwh">
 	<div class="sl-container astro-g42ntuwh">
-									<h1 id="_top" class="astro-6ip6di3s" data-sl-id="f313">Variables de entorno no válidas.</h1>
+									<h1 id="_top" class="astro-6ip6di3s" data-sl-id="f291">Variables de entorno no válidas.</h1>
 									</div>
 </div>
 								<div class="content-panel astro-g42ntuwh">
@@ -1198,10 +1180,10 @@
 	
 										
 <blockquote>
-<p data-sl-id="f314">Las siguientes variables de entorno definidas en <code dir="auto">env.schema</code> no son válidas.</p>
+<p data-sl-id="f292">Las siguientes variables de entorno definidas en <code dir="auto">env.schema</code> no son válidas.</p>
 </blockquote>
-<div class="sl-heading-wrapper level-h2"><h2 id="what-went-wrong" data-sl-id="f315">¿Qué salió mal?</h2><a class="sl-anchor-link" href="#what-went-wrong" data-sl-id="f316"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Sección titulada "¿Qué salió mal?"</span></a></div>
-<p data-sl-id="f317">Algunas variables de entorno no coinciden con el tipo de datos y/o las propiedades definidas en <code dir="auto">env.schema</code>.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="what-went-wrong" data-sl-id="f293">¿Qué salió mal?</h2><a class="sl-anchor-link" href="#what-went-wrong" data-sl-id="f294"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Sección titulada "¿Qué salió mal?"</span></a></div>
+<p data-sl-id="f295">Algunas variables de entorno no coinciden con el tipo de datos y/o las propiedades definidas en <code dir="auto">env.schema</code>.</p>
 									
 
 	
@@ -1210,7 +1192,7 @@
 	
 	
 	
-	<span id="docsearch-lvl0" hidden="" data-sl-id="f318">Referencia de errores</span>
+	<span id="docsearch-lvl0" hidden="" data-sl-id="f296">Referencia de errores</span>
 </div>
 									<div class="hide-when-toc-is-visible astro-jf74usjm">
 	<div class="container astro-2qw6dox2" lang="en" dir="ltr" data-algolia-exclude="">
@@ -1221,9 +1203,9 @@
 			
 <img src="/_astro/JamesQuick.BYVczE5K_Z27j1Lz.webp" alt="" loading="lazy" decoding="async" width="72" height="72" class="astro-2qw6dox2">
 		</div>
-		<h2 id="learn-astro-course-2" class="astro-2qw6dox2" data-sl-id="f319"><strong class="astro-2qw6dox2">Aprende Astro</strong> con James Q Quick</h2>
-		<p class="astro-2qw6dox2" data-sl-id="f320">Construye tu primer sitio con 35 lecciones interactivas de Scrimba</p>
-		<a class="sl-link-button not-content primary cta astro-2qw6dox2 astro-b66feiu3" href="https://scrimba.com/intro-to-astro-c00ar0fi5u?via=astro" data-scrimba-cta="true" data-sl-id="f321">Consigue un 20% de descuento</a>
+		<h2 id="learn-astro-course-2" class="astro-2qw6dox2" data-sl-id="f297"><strong class="astro-2qw6dox2">Aprende Astro</strong> con James Q Quick</h2>
+		<p class="astro-2qw6dox2" data-sl-id="f298">Construye tu primer sitio con 35 lecciones interactivas de Scrimba</p>
+		<a class="sl-link-button not-content primary cta astro-2qw6dox2 astro-b66feiu3" href="https://scrimba.com/intro-to-astro-c00ar0fi5u?via=astro" data-scrimba-cta="true" data-sl-id="f299">Consigue un 20% de descuento</a>
 	</aside>
 </div>
 
@@ -1232,9 +1214,9 @@
 <footer class="sl-flex astro-sa7oidru">
 	<div class="meta sl-flex astro-sa7oidru">
 		<div class="sl-flex astro-2imzdnes">
-			<a href="https://github.com/withastro/astro/blob/main/packages/astro/src/core/errors/errors-data.ts" class="sl-flex astro-2imzdnes" data-sl-id="f322"><svg aria-hidden="true" class="astro-2imzdnes astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path d="M22 7.24a1 1 0 0 0-.29-.71l-4.24-4.24a1 1 0 0 0-1.1-.22 1 1 0 0 0-.32.22l-2.83 2.83L2.29 16.05a1 1 0 0 0-.29.71V21a1 1 0 0 0 1 1h4.24a1 1 0 0 0 .76-.29l10.87-10.93L21.71 8c.1-.1.17-.2.22-.33a1 1 0 0 0 0-.24v-.14l.07-.05ZM6.83 20H4v-2.83l9.93-9.93 2.83 2.83L6.83 20ZM18.17 8.66l-2.83-2.83 1.42-1.41 2.82 2.82-1.41 1.42Z"></path></svg>
+			<a href="https://github.com/withastro/astro/blob/main/packages/astro/src/core/errors/errors-data.ts" class="sl-flex astro-2imzdnes" data-sl-id="f300"><svg aria-hidden="true" class="astro-2imzdnes astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path d="M22 7.24a1 1 0 0 0-.29-.71l-4.24-4.24a1 1 0 0 0-1.1-.22 1 1 0 0 0-.32.22l-2.83 2.83L2.29 16.05a1 1 0 0 0-.29.71V21a1 1 0 0 0 1 1h4.24a1 1 0 0 0 .76-.29l10.87-10.93L21.71 8c.1-.1.17-.2.22-.33a1 1 0 0 0 0-.24v-.14l.07-.05ZM6.83 20H4v-2.83l9.93-9.93 2.83 2.83L6.83 20ZM18.17 8.66l-2.83-2.83 1.42-1.41 2.82 2.82-1.41 1.42Z"></path></svg>
 				Editar página</a>
-			<a href="https://contribute.docs.astro.build/guides/i18n/" class="sl-flex astro-2imzdnes" data-sl-id="f323"><svg aria-hidden="true" class="astro-2imzdnes astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"></path></svg> Traducir esta página</a>
+			<a href="https://contribute.docs.astro.build/guides/i18n/" class="sl-flex astro-2imzdnes" data-sl-id="f301"><svg aria-hidden="true" class="astro-2imzdnes astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"></path></svg> Traducir esta página</a>
 		</div>
 		
 	</div>
@@ -1246,15 +1228,15 @@
 	
 </footer>
 <section class="sl-flex astro-3f4rfcpt">
-	<a href="/contribute/" class="sl-flex astro-3f4rfcpt" data-sl-id="f324"><svg aria-hidden="true" class="astro-3f4rfcpt astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg>
+	<a href="/contribute/" class="sl-flex astro-3f4rfcpt" data-sl-id="f302"><svg aria-hidden="true" class="astro-3f4rfcpt astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg>
 		Contribuir</a>
 
-	<a href="https://astro.esdocu.com/chat" class="sl-flex astro-3f4rfcpt" data-sl-id="f325"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="width:1.2em;height:1.2em;" class="astro-3f4rfcpt">
+	<a href="https://astro.esdocu.com/chat" class="sl-flex astro-3f4rfcpt" data-sl-id="f303"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="width:1.2em;height:1.2em;" class="astro-3f4rfcpt">
 			<path d="M12.3 12.22A4.92 4.92 0 0 0 14 8.5a5 5 0 0 0-10 0a4.92 4.92 0 0 0 1.7 3.72A8 8 0 0 0 1 19.5a1 1 0 0 0 2 0a6 6 0 0 1 12 0a1 1 0 0 0 2 0a8 8 0 0 0-4.7-7.28M9 11.5a3 3 0 1 1 3-3a3 3 0 0 1-3 3m9.74.32A5 5 0 0 0 15 3.5a1 1 0 0 0 0 2a3 3 0 0 1 3 3a3 3 0 0 1-1.5 2.59a1 1 0 0 0-.5.84a1 1 0 0 0 .45.86l.39.26l.13.07a7 7 0 0 1 4 6.38a1 1 0 0 0 2 0a9 9 0 0 0-4.23-7.68" class="astro-3f4rfcpt"></path>
 		</svg>
 		Comunidad</a>
 
-	<a href="https://opencollective.com/astrodotbuild" class="sl-flex astro-3f4rfcpt" data-sl-id="f326"><svg aria-hidden="true" class="astro-3f4rfcpt astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path d="M20.16 5A6.29 6.29 0 0 0 12 4.36a6.27 6.27 0 0 0-8.16 9.48l6.21 6.22a2.78 2.78 0 0 0 3.9 0l6.21-6.22a6.27 6.27 0 0 0 0-8.84m-1.41 7.46-6.21 6.21a.76.76 0 0 1-1.08 0l-6.21-6.24a4.29 4.29 0 0 1 0-6 4.27 4.27 0 0 1 6 0 1 1 0 0 0 1.42 0 4.27 4.27 0 0 1 6 0 4.29 4.29 0 0 1 .08 6Z"></path></svg>
+	<a href="https://opencollective.com/astrodotbuild" class="sl-flex astro-3f4rfcpt" data-sl-id="f304"><svg aria-hidden="true" class="astro-3f4rfcpt astro-qycegugb" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path d="M20.16 5A6.29 6.29 0 0 0 12 4.36a6.27 6.27 0 0 0-8.16 9.48l6.21 6.22a2.78 2.78 0 0 0 3.9 0l6.21-6.22a6.27 6.27 0 0 0 0-8.84m-1.41 7.46-6.21 6.21a.76.76 0 0 1-1.08 0l-6.21-6.24a4.29 4.29 0 0 1 0-6 4.27 4.27 0 0 1 6 0 1 1 0 0 0 1.42 0 4.27 4.27 0 0 1 6 0 4.29 4.29 0 0 1 .08 6Z"></path></svg>
 		Patrocinar</a>
 </section>
 								</div>
