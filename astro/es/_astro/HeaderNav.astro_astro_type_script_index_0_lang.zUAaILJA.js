@@ -1,0 +1,1 @@
+import{t as e}from"./dom.BMouOFQ8.js?dpl=6a3fa9486a76cd000869e97e";e(`[data-home-link]`,HTMLAnchorElement).addEventListener(`contextmenu`,e=>{e.preventDefault(),window.location.href=`/press#assets`});
